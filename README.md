@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cesur Akvaryum - Akvaryum Dünyası</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #e0f7fa;
+      color: #004d40;
+    }
+    header {
+      background: #00796b;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+    nav {
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+    }
+    nav a {
+      color: #b2dfdb;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e0f2f1;
+    }
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section.products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      padding: 18px;
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .product-card h3 {
+      margin: 0 0 10px;
+      color: #00796b;
+      font-size: 1.4rem;
+    }
+    .product-card p {
+      color: #555;
+      font-size: 1rem;
+      height: 55px;
+      overflow: hidden;
+    }
+    section#about, section#contact {
+      margin-top: 50px;
+      background: #b2dfdb;
+      padding: 20px;
+      border-radius: 10px;
+      color: #004d40;
+    }
+    section#about h2, section#contact h2 {
+      margin-top: 0;
+    }
+    footer {
+      background: #00796b;
+      color: white;
+      text-align: center;
+      padding: 14px 10px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cesur Akvaryum</h1>
+  </header>
+
+  <nav>
+    <a href="#products">Ürünler</a>
+    <a href="#about">Hakkımızda</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+
+  <main>
+    <section id="products" class="products">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Akvaryum Seti" />
+        <h3>Akvaryum Başlangıç Seti</h3>
+        <p>Yeni başlayanlar için komple akvaryum seti, filtre ve aksesuarlarla birlikte.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=400&q=80" alt="Tropikal Balıklar" />
+        <h3>Tropikal Balık Paketi</h3>
+        <p>Canlı ve sağlıklı tropikal balık çeşitleri, bakımı kolaydır.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=400&q=80" alt="Akvaryum Aksesuarları" />
+        <h3>Aksesuarlar & Dekorasyon</h3>
+        <p>Bitkiler, taşlar ve dekoratif ürünlerle akvaryumunu güzelleştir.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Hakkımızda</h2>
+      <p>
+        Cesur Akvaryum, akvaryum tutkunları için kaliteli ürünler sunar. 
+        Balıkların sağlığı ve akvaryum dekorasyonunda uzmanız.
+        Müşteri memnuniyeti bizim için en önemli önceliktir.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>İletişim</h2>
+      <p>Email: info@cesurakvaryum.com</p>
+      <p>Telefon: +90 501 376 15 33</p>
+      <p>Adres: Aksaray, Türkiye</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Cesur Akvaryum. Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>
