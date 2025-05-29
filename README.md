@@ -1,209 +1,139 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cesur Akvaryum</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f0f8ff;
-    }
-    header {
-      background-color: #00838f;
-      color: white;
-      padding: 20px;
+ <style>
+    /* ... diğer stiller aynı kalacak ... */
+
+    /* Orta bölüm için daha şık görünüm */
+    .scroll-section {
       display: flex;
-      align-items: center;
-      gap: 15px;
-      padding-left: 30px;
-    }
-    header img.logo {
-      height: 50px;
-      width: 50px;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 900;
-      font-size: 1.8rem;
-    }
-    header p {
-      margin-left: auto;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #b2dfdb;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 40px;
-      color: #00695c;
-      font-weight: 700;
-    }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 30px;
-      padding: 30px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      overflow-x: auto;
+      gap: 24px;
+      padding: 30px 24px 40px;
+      scroll-snap-type: x mandatory;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      border-radius: 20px;
+      margin: 0 20px 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
     .product-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      min-width: 300px;
+      flex-shrink: 0;
+      background-color: white;
+      border-radius: 18px;
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.08);
       padding: 20px;
+      scroll-snap-align: start;
       text-align: center;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      position: relative;
     }
     .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transform: translateY(-10px) scale(1.07);
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25),
+        0 6px 12px rgba(0, 0, 0, 0.12);
       z-index: 10;
     }
     .product-card img {
-      max-width: 100%;
-      border-radius: 12px;
-      height: 180px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
-      margin-bottom: 15px;
+      border-radius: 16px;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover img {
+      transform: scale(1.05);
     }
     .product-card h3 {
-      margin: 0 0 10px;
+      margin: 18px 0 8px;
       color: #00796b;
       font-weight: 800;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      user-select: text;
     }
     .product-card p {
-      font-size: 14px;
       color: #444;
-      margin-bottom: 12px;
+      font-size: 15px;
+      margin-bottom: 14px;
+      user-select: text;
     }
-    footer {
-      background-color: #eeeeee;
-      text-align: center;
-      padding: 20px;
+    .product-detail {
+      display: none;
+      padding: 12px 18px;
+      background-color: #b2dfdb;
+      border-radius: 0 0 16px 16px;
+      color: #004d40;
       font-size: 14px;
-      color: #666;
-      margin-top: 60px;
+      user-select: text;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+      line-height: 1.4;
+    }
+    .product-detail.active {
+      display: block;
+    }
+    /* Buton tarzı detay gösterme/kapatma */
+    .toggle-btn {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #00796b;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+    .toggle-btn:hover {
+      background-color: #004d40;
     }
   </style>
-</head>
-<body>
-  <header>
-    <img class="logo" src="{{ 'logo.png' | asset_url }}" alt="Cesur Akvaryum Logo" />
-    <h1>Cesur Akvaryum</h1>
-    <p>Doğal ve Sağlıklı Akvaryumlar İçin Her Şey</p>
-  </header>
 
-  <h2>🐠 Ürünlerimiz</h2>
-  <div class="products-grid">
-    {% for product in collections.all.products %}
-      <a href="{{ product.url }}" class="product-card">
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" />
-        <h3>{{ product.title }}</h3>
-        <p>{{ product.description | strip_html | truncate: 80 }}</p>
-      </a>
-    {% endfor %}
+  <div class="scroll-section">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2020/02/14/17/59/aquarium-4848120_1280.jpg" alt="Cam Akvaryum" />
+      <h3>Cam Akvaryum</h3>
+      <p>Şık ve dayanıklı cam akvaryum çeşitleri.</p>
+      <div class="product-detail">
+        Cam akvaryumlar, net görünüm ve dayanıklılığı ile tercih edilir. Farklı boyut ve şekillerde mevcuttur.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/13/54/aquarium-2594583_1280.jpg" alt="Başlangıç Seti" />
+      <h3>Başlangıç Seti</h3>
+      <p>Yeni başlayanlara özel eksiksiz akvaryum setleri.</p>
+      <div class="product-detail">
+        Filtre, ısıtıcı, dekor, yem ve temel aksesuarlarla dolu başlangıç seti. Akvaryum hobisine kolay başlangıç!
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+    <!-- Diğer kartlar aynı şekilde -->
   </div>
 
-  <footer>
-    &copy; {{ 'now' | date: '%Y' }} Cesur Akvaryum. Tüm hakları saklıdır.
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ product.title }} - Cesur Akvaryum</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 20px;
-      background-color: #f0f8ff;
-      color: #004d40;
+  <script>
+    function toggleDetail(btn) {
+      const card = btn.closest('.product-card');
+      const detail = card.querySelector('.product-detail');
+      if(detail.classList.contains('active')) {
+        detail.classList.remove('active');
+        btn.textContent = 'Detayları Göster';
+      } else {
+        // Aynı anda sadece bir detay açılması için
+        document.querySelectorAll('.product-detail.active').forEach(d => {
+          d.classList.remove('active');
+          d.parentElement.querySelector('.toggle-btn').textContent = 'Detayları Göster';
+        });
+        detail.classList.add('active');
+        btn.textContent = 'Kapat';
+      }
     }
-    header {
-      background-color: #00838f;
-      color: white;
-      padding: 20px 30px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    header img.logo {
-      height: 50px;
-      width: 50px;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 900;
-      font-size: 1.8rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
-    img.product-image {
-      max-width: 100%;
-      border-radius: 18px;
-      margin-bottom: 30px;
-    }
-    h2 {
-      margin-top: 0;
-      font-weight: 800;
-      font-size: 2rem;
-      color: #00796b;
-    }
-    p.description {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #444;
-      margin-bottom: 20px;
-    }
-    .price {
-      font-size: 24px;
-      font-weight: 900;
-      color: #004d40;
-      margin-bottom: 30px;
-    }
-    a.back-link {
-      display: inline-block;
-      margin-top: 20px;
-      color: #00796b;
-      text-decoration: none;
-      font-weight: 700;
-      border: 2px solid #00796b;
-      padding: 10px 20px;
-      border-radius: 30px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    a.back-link:hover {
-      background-color: #00796b;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img class="logo" src="{{ 'logo.png' | asset_url }}" alt="Cesur Akvaryum Logo" />
-    <h1>Cesur Akvaryum</h1>
-  </header>
-
-  <main>
-    <img class="product-image" src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" />
-    <h2>{{ product.title }}</h2>
-    <p class="price">{{ product.price | money }}</p>
-    <p class="description">{{ product.description | raw }}</p>
-
-    <a href="/" class="back-link">← Ana Sayfaya Dön</a>
-  </main>
-</body>
-</html>
+  </script>
