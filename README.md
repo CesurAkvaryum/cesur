@@ -151,24 +151,40 @@
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1614019512475-c9f6a0eb98d5" alt="Akvaryum 1">
         <div class="content">
-          <h3>Beta Akvaryum Seti</h3>
-          <p>Şık ve kompakt tasarımı ile küçük alanlar için ideal.</p>
+          <h3>Akvaryum</h3>
+          <p>Farklı boyutlarda kaliteli cam akvaryumlar.</p>
           <button id="BilgiBtn">Detaylar</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1587574293340-38e58cc6d3d0" alt="Akvaryum 2">
+        <img src="https://images.unsplash.com/photo-1592229505780-dc361b2cfa9c" alt="Dekor">
         <div class="content">
-          <h3>Yüksek Cam Akvaryum</h3>
-          <p>Kristal berraklığında cam ve geniş hacim.</p>
+          <h3>Akvaryum Dekorları</h3>
+          <p>Estetik ve doğal görünümlü dekor seçenekleri.</p>
           <button>Detaylar</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1602526210254-11b99e476d60" alt="Akvaryum 3">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="Bitki">
         <div class="content">
-          <h3>Mini Bitkili Akvaryum</h3>
-          <p>Canlı bitkilerle doğal bir atmosfer.</p>
+          <h3>Bitki</h3>
+          <p>Canlı ve yapay bitkilerle doğal bir ortam yaratın.</p>
+          <button>Detaylar</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1615193470313-bdd2523cc4db" alt="Canlı">
+        <div class="content">
+          <h3>Canlı</h3>
+          <p>Sağlıklı ve çeşitli akvaryum balıkları.</p>
+          <button>Detaylar</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610279721635-4a2e8f142cc1" alt="Filtre">
+        <div class="content">
+          <h3>Filtreler</h3>
+          <p>Temiz ve sağlıklı su için güçlü filtre çözümleri.</p>
           <button>Detaylar</button>
         </div>
       </div>
@@ -182,7 +198,7 @@
 
   <section class="contact-section" id="iletisim">
     <h2>Bize Ulaşın</h2>
-    <p>Telefon: <a href="tel:+905551234567">+90 555 123 45 67</a><br>E-posta: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
+    <p>Telefon: <a href="tel:+905013761533">+90 501 376 15 33</a><br>E-posta: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
     <p>Adres: İstanbul, Türkiye</p>
   </section>
 
