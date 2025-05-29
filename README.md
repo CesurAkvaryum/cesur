@@ -1,214 +1,175 @@
-!DOCTYPE html
-html lang=tr
-head
-  meta charset=UTF-8 
-  meta name=viewport content=width=device-width, initial-scale=1 
-  titleCesur Akvaryumtitle
-  style
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cesur Akvaryum</title>
+  <style>
     body {
-      font-family Arial, sans-serif;
-      margin 0;
-      background-color #f0f8ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f8ff;
     }
     header {
-      background-color #00838f;
-      color white;
-      padding 20px;
-      display flex;
-      align-items center;
-      gap 15px;
-      padding-left 30px;
+      background-color: #00838f;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-    header img {
-      width 48px;
-      height 48px;
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #00695c;
     }
-    header h1 {
-      margin 0;
-      font-weight 900;
-      font-size 2rem;
-    }
-
-    .tabs {
-      display flex;
-      justify-content center;
-      gap 20px;
-      margin 20px 0;
-    }
-    .tab-button {
-      padding 10px 20px;
-      border none;
-      border-radius 30px;
-      background-color #b2ebf2;
-      color #006064;
-      font-weight bold;
-      cursor pointer;
-      transition background-color 0.3s;
-    }
-    .tab-button.active {
-      background-color #00796b;
-      color white;
-    }
-
-    .tab-content {
-      display none;
-    }
-    .tab-content.active {
-      display block;
-    }
-
     .scroll-section {
-      display flex;
-      overflow-x auto;
-      overflow-y hidden;
-      gap 24px;
-      padding 30px 24px 40px;
-      scroll-snap-type x mandatory;
-      background linear-gradient(135deg, #a8edea, #fed6e3);
-      border-radius 20px;
-      margin 0 20px 40px;
-      box-shadow 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
     }
     .product-card {
-      min-width 300px;
-      flex-shrink 0;
-      background-color white;
-      border-radius 18px;
-      box-shadow 0 8px 20px rgba(0, 0, 0, 0.15),
-                  0 2px 6px rgba(0, 0, 0, 0.08);
-      padding 20px;
-      scroll-snap-align start;
-      text-align center;
-      cursor pointer;
-      transition transform 0.3s ease, box-shadow 0.3s ease;
-      position relative;
+      min-width: 300px;
+      flex-shrink: 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      scroll-snap-align: start;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+      position: relative;
     }
-    .product-cardhover {
-      transform translateY(-10px) scale(1.07);
+    .product-card:hover {
+      transform: scale(1.03);
     }
     .product-card img {
-      width 100%;
-      height 200px;
-      object-fit cover;
-      border-radius 16px;
-      transition transform 0.3s ease;
-    }
-    .product-cardhover img {
-      transform scale(1.05);
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
     }
     .product-card h3 {
-      margin 18px 0 8px;
-      color #00796b;
+      margin: 10px 0 5px;
+      color: #00796b;
+    }
+    .product-card p {
+      color: #444;
+      font-size: 14px;
     }
     .product-detail {
-      display none;
-      padding 12px 18px;
-      background-color #b2dfdb;
-      border-radius 0 0 16px 16px;
-      color #004d40;
-      font-size 14px;
-      line-height 1.4;
+      display: none;
+      padding: 15px;
+      margin-top: 10px;
+      background-color: #e0f2f1;
+      border-top: 1px solid #b2dfdb;
+      border-radius: 0 0 10px 10px;
+      font-size: 14px;
+      color: #004d40;
+      text-align: left;
     }
     .product-detail.active {
-      display block;
+      display: block;
     }
-    .toggle-btn {
-      position absolute;
-      bottom 15px;
-      left 50%;
-      transform translateX(-50%);
-      background-color #00796b;
-      border none;
-      color white;
-      padding 8px 16px;
-      border-radius 30px;
-      cursor pointer;
+    footer {
+      background-color: #eeeeee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
     }
-  style
-head
-body
+  </style>
+</head>
+<body>
 
-header
-  img src=httpscdn-icons-png.flaticon.com512616616408.png alt=Logo
-  h1Cesur Akvaryumh1
-header
+  <header>
+    <h1>Cesur Akvaryum</h1>
+    <p>Doğal ve Sağlıklı Akvaryumlar İçin Her Şey</p>
+  </header>
 
-!-- Sekme Butonları --
-div class=tabs
-  button class=tab-button active onclick=openTab('akvaryum', this)🐠 Akvaryumbutton
-  button class=tab-button onclick=openTab('bitki', this)🌿 Bitkibutton
-  button class=tab-button onclick=openTab('canli', this)🐟 Canlıbutton
-div
+  <h2>🐠 Akvaryum</h2>
+  <div class="scroll-section">
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2020/02/14/17/59/aquarium-4848120_1280.jpg" alt="Cam Akvaryum" />
+      <h3>Cam Akvaryum</h3>
+      <p>Şık ve dayanıklı cam akvaryum çeşitleri.</p>
+      <div class="product-detail">
+        Cam akvaryumlar dayanıklılık ve şıklığı bir arada sunar. Farklı boyut ve tasarımlarda mevcuttur.
+      </div>
+    </div>
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/13/54/aquarium-2594583_1280.jpg" alt="Başlangıç Seti" />
+      <h3>Başlangıç Seti</h3>
+      <p>Yeni başlayanlara özel eksiksiz akvaryum setleri.</p>
+      <div class="product-detail">
+        Yeni başlayanlar için tasarlanmış bu set, filtre, ısıtıcı, dekor, yem ve temel aksesuarlarla birlikte gelir. Akvaryum hobisine kolay bir adımla giriş yapın!
+      </div>
+    </div>
+  </div>
 
-!-- Akvaryum İçeriği --
-div id=akvaryum class=tab-content active
-  div class=scroll-section
-    div class=product-card
-      img src=httpscdn.pixabay.comphoto202002141759aquarium-4848120_1280.jpg alt=Cam Akvaryum 
-      h3Cam Akvaryumh3
-      pŞık ve dayanıklı cam akvaryum çeşitleri.p
-      div class=product-detail
-        Cam akvaryumlar, net görünüm ve dayanıklılığı ile tercih edilir. Farklı boyut ve şekillerde mevcuttur.
-      div
-      button class=toggle-btn onclick=toggleDetail(this)Detayları Gösterbutton
-    div
-  div
-div
+  <h2>🌿 Bitki</h2>
+  <div class="scroll-section">
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2016/04/14/20/11/aquarium-1322444_1280.jpg" alt="Bitkili Akvaryum" />
+      <h3>Bitkili Akvaryum</h3>
+      <p>CO2 gerektirmeyen canlı akvaryum bitkileri.</p>
+      <div class="product-detail">
+        Canlı bitkiler ile akvaryumunuzu doğal ve sağlıklı hale getirin. CO2 takviyesi gerektirmeyen türler mevcuttur.
+      </div>
+    </div>
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2020/07/12/11/25/aquarium-5396143_1280.jpg" alt="Bitki Dekoru" />
+      <h3>Bitki Dekorları</h3>
+      <p>Doğal bitkilerle akvaryumunuzu süsleyin.</p>
+      <div class="product-detail">
+        Akvaryumunuz için doğal ve estetik bitki dekorları. Farklı renk ve boyut seçenekleri ile.
+      </div>
+    </div>
+  </div>
 
-!-- Bitki İçeriği --
-div id=bitki class=tab-content
-  div class=scroll-section
-    div class=product-card
-      img src=httpscdn.pixabay.comphoto201703271401plant-2178750_1280.jpg alt=Bitki 
-      h3Akvaryum Bitkisih3
-      pCanlı ve sağlıklı akvaryum bitkileri.p
-      div class=product-detail
-        Doğal ortamı canlandıran bitkilerle su kalitesi artar, estetik zenginleşir.
-      div
-      button class=toggle-btn onclick=toggleDetail(this)Detayları Gösterbutton
-    div
-  div
-div
+  <h2>🐟 Canlı</h2>
+  <div class="scroll-section">
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2021/08/05/11/20/fish-6522766_1280.jpg" alt="Neon Tetra" />
+      <h3>Neon Tetra</h3>
+      <p>Renkli ve uyumlu sürü balıkları.</p>
+      <div class="product-detail">
+        Neon Tetra, sürü halinde uyumlu yaşayan ve akvaryuma renk katan küçük balık türüdür.
+      </div>
+    </div>
+    <div class="product-card" onclick="toggleDetail(this)">
+      <img src="https://cdn.pixabay.com/photo/2022/07/20/13/35/guppy-7334925_1280.jpg" alt="Guppy" />
+      <h3>Guppy</h3>
+      <p>Kolay bakımlı, canlı renkli balık türleri.</p>
+      <div class="product-detail">
+        Guppy, bakımı kolay, renkli ve aktif hareket eden popüler bir akvaryum balığıdır.
+      </div>
+    </div>
+  </div>
 
-!-- Canlı İçeriği --
-div id=canli class=tab-content
-  div class=scroll-section
-    div class=product-card
-      img src=httpscdn.pixabay.comphoto202108051120fish-6522766_1280.jpg alt=Neon Tetra 
-      h3Neon Tetrah3
-      pRenkli ve uyumlu sürü balıkları.p
-      div class=product-detail
-        Neon tetra, barışçıl doğası ve canlı renkleriyle en çok tercih edilen balıklardandır.
-      div
-      button class=toggle-btn onclick=toggleDetail(this)Detayları Gösterbutton
-    div
-  div
-div
+  <h2>📞 İletişim</h2>
+  <div style="padding: 0 20px; margin-bottom: 40px;">
+    <p><strong>Adres:</strong> Aksaray, Türkiye</p>
+    <p><strong>Telefon:</strong> +90 501 376 15 33</p>
+    <p><strong>E-Posta:</strong> info@cesurakvaryum.com</p>
+  </div>
 
-!-- JavaScript --
-script
-  function openTab(tabId, buttonElement) {
-    document.querySelectorAll('.tab-content').forEach(tc = tc.classList.remove('active'));
-    document.querySelectorAll('.tab-button').forEach(btn = btn.classList.remove('active'));
-    
-    document.getElementById(tabId).classList.add('active');
-    buttonElement.classList.add('active');
-  }
+  <footer>
+    &copy; 2025 Cesur Akvaryum. Tüm hakları saklıdır.
+  </footer>
 
-  function toggleDetail(btn) {
-    const card = btn.closest('.product-card');
-    const detail = card.querySelector('.product-detail');
-    const isActive = detail.classList.contains('active');
-
-    document.querySelectorAll('.product-detail').forEach(d = d.classList.remove('active'));
-    document.querySelectorAll('.toggle-btn').forEach(b = b.textContent = 'Detayları Göster');
-
-    if (!isActive) {
-      detail.classList.add('active');
-      btn.textContent = 'Kapat';
+  <script>
+    function toggleDetail(card) {
+      const detail = card.querySelector('.product-detail');
+      detail.classList.toggle('active');
     }
-  }
-script
+  </script>
 
-body
-html
+</body>
+</html>
+  </script>
+
+</body>
+</html>
