@@ -13,11 +13,10 @@
     header {
       background-color: #00838f;
       color: white;
-      padding: 20px;
+      padding: 20px 30px;
       display: flex;
       align-items: center;
       gap: 15px;
-      padding-left: 30px;
     }
     header img {
       width: 48px;
@@ -44,9 +43,15 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
-    .tab-button.active {
+    .tab-button.active,
+    .tab-button[aria-selected="true"] {
       background-color: #00796b;
       color: white;
+    }
+    .tab-button:hover,
+    .tab-button:focus {
+      outline: none;
+      opacity: 0.85;
     }
     .tab-content {
       display: none;
@@ -121,6 +126,13 @@
       padding: 8px 16px;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .toggle-btn:hover,
+    .toggle-btn:focus {
+      background-color: #004d40;
+      outline: none;
+      opacity: 0.9;
     }
     /* Bilgi Butonu */
     #BilgiBtn {
@@ -135,6 +147,12 @@
       margin: 0 auto 40px;
       display: block;
       width: 150px;
+      transition: opacity 0.3s;
+    }
+    #BilgiBtn:hover,
+    #BilgiBtn:focus {
+      opacity: 0.85;
+      outline: none;
     }
     /* Modal */
     #infoModal {
@@ -151,6 +169,9 @@
       overflow-y: auto;
       z-index: 9999;
     }
+    #infoModal:focus {
+      outline: none;
+    }
     #infoModal h2 {
       margin-top: 0;
       color: #00796b;
@@ -164,6 +185,24 @@
       border-radius: 30px;
       cursor: pointer;
       font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    #infoModal button:hover,
+    #infoModal button:focus {
+      opacity: 0.85;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .product-card {
+        min-width: 250px;
+      }
+      .scroll-section {
+        padding: 20px 12px 30px;
+        gap: 16px;
+        margin: 0 10px 30px;
+      }
     }
   </style>
 </head>
@@ -174,243 +213,209 @@
   <h1>Cesur Akvaryum</h1>
 </header>
 
-<div class="tabs">
-  <button class="tab-button active" onclick="openTab('akvaryum', this)">🐠 Akvaryum</button>
-  <button class="tab-button" onclick="openTab('bitki', this)">🌿 Bitki</button>
-  <button class="tab-button" onclick="openTab('canli', this)">🐟 Canlı</button>
+<div class="tabs" role="tablist" aria-label="Ürün Kategorileri">
+  <button
+    class="tab-button active"
+    role="tab"
+    aria-selected="true"
+    id="tab-akvaryum"
+    aria-controls="akvaryum"
+    tabindex="0"
+    onclick="openTab('akvaryum', this)">🐠 Akvaryum</button>
+  <button
+    class="tab-button"
+    role="tab"
+    aria-selected="false"
+    id="tab-bitki"
+    aria-controls="bitki"
+    tabindex="-1"
+    onclick="openTab('bitki', this)">🌿 Bitki</button>
+  <button
+    class="tab-button"
+    role="tab"
+    aria-selected="false"
+    id="tab-canli"
+    aria-controls="canli"
+    tabindex="-1"
+    onclick="openTab('canli', this)">🐟 Canlı</button>
 </div>
 
 <!-- Akvaryum İçeriği -->
-<div id="akvaryum" class="tab-content active">
+<div
+  id="akvaryum"
+  class="tab-content active"
+  role="tabpanel"
+  aria-labelledby="tab-akvaryum"
+  tabindex="0">
   <div class="scroll-section">
 
-    <div class="product-card">
+    <div class="product-card" tabindex="0">
       <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/fish-tank-1866863_1280.jpg" alt="Küçük Cam Akvaryum" />
       <h3>Küçük Cam Akvaryum</h3>
       <p>Kompakt tasarımıyla her alana uygun.</p>
       <div class="product-detail">
         Küçük boyutlu, minimal alanlarda kullanım için ideal cam akvaryum.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" tabindex="0">
       <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Büyük Cam Akvaryum" />
       <h3>Büyük Cam Akvaryum</h3>
       <p>Geniş hacimli gösterişli akvaryum.</p>
       <div class="product-detail">
         200 litrelik bu model, büyük balık grupları için uygundur.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/01/05/13/58/aquarium-1129108_1280.jpg" alt="Yuvarlak Akvaryum" />
-      <h3>Yuvarlak Akvaryum</h3>
-      <p>Modern ve estetik tasarım.</p>
-      <div class="product-detail">
-        Masa üstü veya dekoratif alanlar için ideal yuvarlak cam akvaryum.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2015/11/03/08/57/aquarium-1015297_1280.jpg" alt="Dekoratif Akvaryum" />
-      <h3>Dekoratif Akvaryum</h3>
-      <p>Mobilyaya entegre edilebilir şık model.</p>
-      <div class="product-detail">
-        Şık bir sehpa veya masa içine entegre edilebilir akvaryum modelidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/aquarium-1865159_1280.jpg" alt="Küp Akvaryum" />
-      <h3>Küp Akvaryum</h3>
-      <p>Kompakt, kolay yerleştirilebilir.</p>
-      <div class="product-detail">
-        Minimal tasarımı ile küçük alanlara uygun küp şeklinde akvaryum.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
   </div>
 </div>
 
-<!-- Bitki İçeriği (Birleştirilen Detaylı Bitkiler) -->
-<div id="bitki" class="tab-content">
+<!-- Bitki İçeriği -->
+<div
+  id="bitki"
+  class="tab-content"
+  role="tabpanel"
+  aria-labelledby="tab-bitki"
+  tabindex="0">
   <div class="scroll-section">
 
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/07/02/22/04/plant-2475494_1280.jpg" alt="Java Moss" />
-      <h3>Java Moss</h3>
-      <p>Kolay bakımlı su bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Taxiphyllum barbieri<br />
-        <strong>Işık:</strong> Düşük ila orta<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Java Moss, akvaryumda dekoratif ve bakımı kolay bir bitkidir. Balıklar için saklanma alanı sağlar.
+    <div class="product-card" tabindex="0">
+      <img src="https://cdn.pixabay.com/photo/2015/03/17/12/38/water-67516_1280.jpg" alt="Canlı Su Bitkisi" />
+      <h3>Canlı Su Bitkisi</h3>
+      <p>Doğal görünüm ve oksijen sağlar.</p>
+      <div class="product-detail">
+        Akvaryumunuzda doğal dengeyi sağlar ve estetik görünüm katar.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/08/28/20/36/aquatic-plants-2696117_1280.jpg" alt="Anubias" />
-      <h3>Anubias</h3>
-      <p>Düşük ışık bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Anubias barteri<br />
-        <strong>Işık:</strong> Düşük<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Anubias, gölgeyi seven dayanıklı bir bitkidir. Genellikle taş veya kök üzerine bağlanarak kullanılır.
+    <div class="product-card" tabindex="0">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/09/26/water-plants-2588387_1280.jpg" alt="Dekoratif Bitki" />
+      <h3>Dekoratif Bitki</h3>
+      <p>Renkli ve bakımı kolay.</p>
+      <div class="product-detail">
+        Canlı renkleriyle akvaryumunuza şıklık katar.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/04/05/11/39/aquarium-316146_1280.jpg" alt="Amazon Sword" />
-      <h3>Amazon Sword</h3>
-      <p>Büyük yapraklı bitki.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Echinodorus amazonicus<br />
-        <strong>Işık:</strong> Orta<br />
-        <strong>CO2:</strong> Orta seviyede faydalı<br />
-        <strong>Bakım:</strong> Orta<br />
-        <strong>Açıklama:</strong> Amazon Sword, akvaryuma doğal bir görünüm katar ve balıklar için gizlenme alanı sağlar.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/07/22/18/20/aquatic-plants-1533160_1280.jpg" alt="Cryptocoryne" />
-      <h3>Cryptocoryne</h3>
-      <p>Yavaş büyüyen bitki.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Cryptocoryne wendtii<br />
-        <strong>Işık:</strong> Düşük ila orta<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Cryptocoryne, dayanıklı ve az bakım gerektiren bir bitkidir. Farklı renk varyasyonları mevcuttur.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/06/14/23/57/aquarium-2401186_1280.jpg" alt="Vallisneria" />
-      <h3>Vallisneria</h3>
-      <p>Uzun yapraklı su bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Vallisneria spiralis<br />
-        <strong>Işık:</strong> Orta<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Vallisneria, hızlı büyüyen ve akvaryuma doğal bir görünüm veren uzun yapraklı bir bitkidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
   </div>
 </div>
 
 <!-- Canlı İçeriği -->
-<div id="canli" class="tab-content">
+<div
+  id="canli"
+  class="tab-content"
+  role="tabpanel"
+  aria-labelledby="tab-canli"
+  tabindex="0">
   <div class="scroll-section">
 
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/20/22/fish-1284761_1280.jpg" alt="Betta Balığı" />
-      <h3>Betta Balığı</h3>
-      <p>Renkli ve agresif tür.</p>
+    <div class="product-card" tabindex="0">
+      <img src="https://cdn.pixabay.com/photo/2017/03/13/11/26/fish-2136480_1280.jpg" alt="Beta Balığı" />
+      <h3>Beta Balığı</h3>
+      <p>Canlı renkleriyle popüler tür.</p>
       <div class="product-detail">
-        Betta balıkları tek başına tutulmalıdır, renkleri oldukça canlıdır.
+        Kolay bakım ve dayanıklı tür, küçük akvaryumlar için ideal.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/07/10/17/07/fish-389907_1280.jpg" alt="Neon Tetra" />
-      <h3>Neon Tetra</h3>
-      <p>Küçük ve sosyal balık.</p>
+    <div class="product-card" tabindex="0">
+      <img src="https://cdn.pixabay.com/photo/2015/10/23/13/10/fish-1002226_1280.jpg" alt="Guppy Balığı" />
+      <h3>Guppy Balığı</h3>
+      <p>Hızlı çoğalan sevimli balık.</p>
       <div class="product-detail">
-        Neon Tetra, sürü halinde yaşayan ve parlak renkleri olan küçük balıklardır.
+        Çeşitli renk seçenekleri ve aktif yapısıyla akvaryumunuzu canlandırır.
       </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/06/01/20/42/aquarium-2368376_1280.jpg" alt="Guppy" />
-      <h3>Guppy</h3>
-      <p>Çoğaltması kolay balık.</p>
-      <div class="product-detail">
-        Guppyler, renkli ve kolay bakımlı balıklardır. Hızla çoğalırlar.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+      <button class="toggle-btn" onclick="toggleDetail(this, event)">Detayları Göster</button>
     </div>
 
   </div>
 </div>
 
-<!-- Bilgi Butonu -->
-<button id="BilgiBtn">Bilgi</button>
+<button id="BilgiBtn" aria-haspopup="dialog" aria-controls="infoModal">Bilgi</button>
 
-<!-- Modal -->
-<div id="infoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
-  <h2 id="modalTitle">Akvaryum Hakkında Bilgi</h2>
+<div
+  id="infoModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modalTitle"
+  aria-describedby="modalDesc"
+  tabindex="-1">
+  <h2 id="modalTitle">Cesur Akvaryum Hakkında</h2>
   <p id="modalDesc">
-    Cesur Akvaryum, geniş ürün yelpazesi ile akvaryum severlere hizmet vermektedir. Akvaryumlar, canlılar ve bitkiler konusunda uzman çözümler sunuyoruz.
+    Cesur Akvaryum, akvaryum tutkunları için geniş ürün yelpazesi sunar. Canlılar,
+    bitkiler ve akvaryumlar için kaliteli ürünler.
   </p>
-  <button id="closeModalBtn">Kapat</button>
+  <button onclick="closeModal()">Kapat</button>
 </div>
 
 <script>
-  // Tab açma fonksiyonu
   function openTab(tabId, button) {
-    // Tüm tab-contentleri gizle
-    document.querySelectorAll('.tab-content').forEach(tc => {
-      tc.classList.remove('active');
-    });
-    // Tüm tab butonlarından active kaldır
+    // Tüm tab butonlarını ve içeriklerini temizle
     document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+      btn.setAttribute('tabindex', '-1');
     });
-    // Seçili tab-content göster
-    document.getElementById(tabId).classList.add('active');
-    // Butona active ekle
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+      tab.setAttribute('tabindex', '-1');
+    });
+
+    // Seçilen tab aktif yap
     button.classList.add('active');
+    button.setAttribute('aria-selected', 'true');
+    button.setAttribute('tabindex', '0');
+    button.focus();
+
+    const tab = document.getElementById(tabId);
+    tab.classList.add('active');
+    tab.setAttribute('tabindex', '0');
   }
 
-  // Detay açma/kapatma fonksiyonu
-  function toggleDetail(button) {
+  function toggleDetail(button, event) {
+    event.stopPropagation();
     const card = button.parentElement;
     const detail = card.querySelector('.product-detail');
     if (detail.classList.contains('active')) {
       detail.classList.remove('active');
-      button.textContent = 'Detayları Göster';
+      button.textContent = "Detayları Göster";
     } else {
       detail.classList.add('active');
-      button.textContent = 'Detayları Gizle';
+      button.textContent = "Detayları Kapat";
     }
   }
 
-  // Bilgi Modal açma/kapatma
   const infoBtn = document.getElementById('BilgiBtn');
   const modal = document.getElementById('infoModal');
-  const closeModalBtn = document.getElementById('closeModalBtn');
 
   infoBtn.addEventListener('click', () => {
     modal.style.display = 'block';
-  });
-  closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
+    modal.focus();
   });
 
-  // Modal dışına tıklayınca kapatma
-  window.addEventListener('click', (event) => {
-    if(event.target === modal) {
-      modal.style.display = 'none';
+  function closeModal() {
+    modal.style.display = 'none';
+    infoBtn.focus();
+  }
+
+  // Modal dışına tıklayınca veya ESC ile kapatma
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
     }
   });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape" && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+
 </script>
 
 </body>
