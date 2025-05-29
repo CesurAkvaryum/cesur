@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atakan Petshop</title>
+  <title>Cesur Akvaryum</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">ATAKAN PETSHOP</div>
+    <div class="logo">Cesur Akvaryum</div>
     <nav>
       <ul>
         <li>Balık</li>
