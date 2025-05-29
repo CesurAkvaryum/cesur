@@ -8,23 +8,25 @@
 </head>
 <body>
 
+  <!-- ÜST MENÜ -->
   <header>
     <div class="logo">Cesur Akvaryum</div>
     <nav>
-      <ul>
-        <li>Balık</li>
-        <li>Kedi</li>
-        <li>Köpek</li>
-        <li>Kuş</li>
-        <li>Kemirgen</li>
-        <li>Sürüngen</li>
-        <li>Canlı</li>
-        <li>Kampanyalar</li>
+      <ul class="nav-menu">
+        <li><a href="#">Balık</a></li>
+        <li><a href="#">Kedi</a></li>
+        <li><a href="#">Köpek</a></li>
+        <li><a href="#">Kuş</a></li>
+        <li><a href="#">Kemirgen</a></li>
+        <li><a href="#">Sürüngen</a></li>
+        <li><a href="#">Canlı</a></li>
+        <li><a href="#">Kampanyalar</a></li>
       </ul>
     </nav>
     <input type="text" placeholder="Ne aramıştınız?" class="search">
   </header>
 
+  <!-- TANITIM ALANI -->
   <section class="hero">
     <div class="hero-text">
       <h1>Akıllı <span>Kedi Tuvaletleri</span></h1>
@@ -35,6 +37,7 @@
     </div>
   </section>
 
+  <!-- ÜRÜNLER -->
   <section class="products">
     <div class="product-card">
       <img src="hills-cat-food.jpg" alt="Hills Kedi Maması">
