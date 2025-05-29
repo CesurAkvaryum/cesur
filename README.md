@@ -115,7 +115,7 @@
   <section id="iletisim">
     <h2>📞 İletişim</h2>
     <p><strong>Adres:</strong> Cesur Akvaryum, Aksaray</p>
-    <p><strong>Telefon:</strong> 0 501 376 15 33</p>
+    <p><strong>Telefon:</strong> 0501 376 15 33</p>
     <p><strong>E-Posta:</strong> info@cesurakvaryum.com</p>
   </section>
 
