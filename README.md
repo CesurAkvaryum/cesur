@@ -153,76 +153,9 @@
         <div class="content">
           <h3>Akvaryum</h3>
           <p>Farklı boyutlarda kaliteli cam akvaryumlar.</p>
-          <button <button onclick="window.location.href='akvaryum.html'">Detaylar</button>
+          <button id="BilgiBtn">Detaylar</button>
         </div>
       </div>
-	  <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Akvaryum Ürünleri - Cesur Akvaryum</title>
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      background-color: #f4fdfd;
-      color: #003d40;
-    }
-    header {
-      background-color: #006064;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-      padding: 40px;
-    }
-    .gallery img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .back-button {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 30px;
-      padding: 10px 20px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: none;
-      width: fit-content;
-    }
-  </style>
-</head>
-<body>
-  <header>Akvaryum Ürünleri</header>
-  <a href="index.html" class="back-button">← Geri Dön</a>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1614019512475-c9f6a0eb98d5" alt="Akvaryum 1" />
-    <img src="https://images.unsplash.com/photo-1509228627159-6452f6eb7374" alt="Akvaryum 2" />
-    <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Akvaryum 3" />
-    <img src="https://images.unsplash.com/photo-1587574293340-ec6cd7c9a2cd" alt="Akvaryum 4" />
-    <img src="https://images.unsplash.com/photo-1570901327561-7dff8ae1c4b7" alt="Akvaryum 5" />
-    <img src="https://images.unsplash.com/photo-1607082349250-f7c6c629b3d1" alt="Akvaryum 6" />
-  </div>
-</body>
-</html>
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1592229505780-dc361b2cfa9c" alt="Dekor">
         <div class="content">
@@ -265,7 +198,7 @@
 
   <section class="contact-section" id="iletisim">
     <h2>Bize Ulaşın</h2>
-    <p>Telefon: <a href="tel:+905013761533">+90 501 376 15 33</a><br>E-posta: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
+    <p>Telefon: <a href="tel:+905013761533">+90 501 376 1533</a><br>E-posta: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
     <p>Adres: İstanbul, Türkiye</p>
   </section>
 
