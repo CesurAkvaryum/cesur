@@ -5,49 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cesur Akvaryum</title>
   <style>
-    /* Genel sıfırlamalar */
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #e0f2f1;
-      color: #004d40;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      background-color: #f0f8ff;
     }
     header {
+      background-color: #00838f;
+      color: white;
+      padding: 20px;
+      text-align: center;
       display: flex;
       align-items: center;
-      padding: 20px 40px;
-      background-color: #00796b;
-      color: white;
       gap: 15px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding-left: 30px;
     }
-    header img.logo {
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    header img {
+      width: 48px;
+      height: 48px;
     }
     header h1 {
-      font-weight: 900;
-      font-size: 2.2rem;
       margin: 0;
+      font-weight: 900;
+      font-size: 2rem;
       user-select: none;
-      letter-spacing: 1.2px;
     }
-    header p.subtitle {
-      margin-left: auto;
+    header p {
+      margin: 0 0 0 10px;
+      font-size: 1rem;
       font-weight: 600;
-      font-size: 1.1rem;
       color: #b2dfdb;
       user-select: none;
     }
-
-    /* Orta bölüm için daha şık görünüm */
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #00695c;
+      font-weight: 800;
+      font-size: 1.8rem;
+      user-select: none;
+    }
     .scroll-section {
       display: flex;
       overflow-x: auto;
@@ -56,24 +53,9 @@
       scroll-snap-type: x mandatory;
       background: linear-gradient(135deg, #a8edea, #fed6e3);
       border-radius: 20px;
-      margin: 30px 20px 40px;
+      margin: 20px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      scrollbar-width: thin;
-      scrollbar-color: #00796b #b2dfdb;
     }
-    /* Scrollbar styling for Webkit browsers */
-    .scroll-section::-webkit-scrollbar {
-      height: 8px;
-    }
-    .scroll-section::-webkit-scrollbar-track {
-      background: #b2dfdb;
-      border-radius: 10px;
-    }
-    .scroll-section::-webkit-scrollbar-thumb {
-      background-color: #00796b;
-      border-radius: 10px;
-    }
-
     .product-card {
       min-width: 300px;
       flex-shrink: 0;
@@ -135,7 +117,6 @@
     .product-detail.active {
       display: block;
     }
-    /* Buton tarzı detay gösterme/kapatma */
     .toggle-btn {
       position: absolute;
       bottom: 15px;
@@ -156,73 +137,84 @@
     .toggle-btn:hover {
       background-color: #004d40;
     }
-
     footer {
+      background-color: #eeeeee;
       text-align: center;
       padding: 20px;
-      color: #00695c;
-      font-weight: 600;
       font-size: 14px;
-      user-select: none;
-      border-top: 1px solid #b2dfdb;
+      color: #666;
       margin-top: 40px;
+      user-select: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img class="logo" src="https://cdn.pixabay.com/photo/2016/03/31/19/35/fish-1299766_1280.png" alt="Cesur Akvaryum Logo" />
-    <h1>Cesur Akvaryum</h1>
-    <p class="subtitle">Doğal ve Sağlıklı Akvaryumlar İçin Her Şey</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo" />
+    <div>
+      <h1>Cesur Akvaryum</h1>
+      <p>Doğal ve Sağlıklı Akvaryumlar İçin Her Şey</p>
+    </div>
   </header>
 
-  <main>
-    <div class="scroll-section">
-      <div class="product-card">
-        <img src="https://cdn.pixabay.com/photo/2020/02/14/17/59/aquarium-4848120_1280.jpg" alt="Cam Akvaryum" />
-        <h3>Cam Akvaryum</h3>
-        <p>Şık ve dayanıklı cam akvaryum çeşitleri.</p>
-        <div class="product-detail">
-          Cam akvaryumlar, net görünüm ve dayanıklılığı ile tercih edilir. Farklı boyut ve şekillerde mevcuttur.
-        </div>
-        <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+  <h2>🐠 Akvaryum</h2>
+  <div class="scroll-section">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2020/02/14/17/59/aquarium-4848120_1280.jpg" alt="Cam Akvaryum" />
+      <h3>Cam Akvaryum</h3>
+      <p>Şık ve dayanıklı cam akvaryum çeşitleri.</p>
+      <div class="product-detail">
+        Cam akvaryumlar, net görünüm ve dayanıklılığı ile tercih edilir. Farklı boyut ve şekillerde mevcuttur.
       </div>
-      <div class="product-card">
-        <img src="https://cdn.pixabay.com/photo/2017/08/06/13/54/aquarium-2594583_1280.jpg" alt="Başlangıç Seti" />
-        <h3>Başlangıç Seti</h3>
-        <p>Yeni başlayanlara özel eksiksiz akvaryum setleri.</p>
-        <div class="product-detail">
-          Filtre, ısıtıcı, dekor, yem ve temel aksesuarlarla dolu başlangıç seti. Akvaryum hobisine kolay başlangıç!
-        </div>
-        <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-      </div>
-      <!-- Daha fazla ürün kartı ekleyebilirsin -->
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-  </main>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/13/54/aquarium-2594583_1280.jpg" alt="Başlangıç Seti" />
+      <h3>Başlangıç Seti</h3>
+      <p>Yeni başlayanlara özel eksiksiz akvaryum setleri.</p>
+      <div class="product-detail">
+        Filtre, ısıtıcı, dekor, yem ve temel aksesuarlarla dolu başlangıç seti. Akvaryum hobisine kolay başlangıç!
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 Cesur Akvaryum. Tüm hakları saklıdır.
-  </footer>
+  <h2>🌿 Bitki</h2>
+  <div class="scroll-section">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/04/14/20/11/aquarium-1322444_1280.jpg" alt="Bitkili Akvaryum" />
+      <h3>Bitkili Akvaryum</h3>
+      <p>CO2 gerektirmeyen canlı akvaryum bitkileri.</p>
+      <div class="product-detail">
+        Canlı bitkiler akvaryumunuzu güzelleştirir ve su kalitesini artırır. Bakımı kolaydır.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2020/07/12/11/25/aquarium-5396143_1280.jpg" alt="Bitki Dekoru" />
+      <h3>Bitki Dekorları</h3>
+      <p>Doğal bitkilerle akvaryumunuzu süsleyin.</p>
+      <div class="product-detail">
+        Estetik ve doğal bitki dekorları ile akvaryumunuz daha canlı ve doğal görünür.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/01/plant-2178750_1280.jpg" alt="Akvaryum Bitkisi" />
+      <h3>Akvaryum Bitkisi</h3>
+      <p>Canlı ve sağlıklı akvaryum bitkileri.</p>
+      <div class="product-detail">
+        Doğal ortamı canlandıran akvaryum bitkileri, suyun kalitesini artırır ve balıklar için barınak sağlar. Kolay bakım ve hızlı büyüme özelliklerine sahiptir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+  </div>
 
-  <script>
-    function toggleDetail(btn) {
-      const card = btn.closest('.product-card');
-      const detail = card.querySelector('.product-detail');
-      if(detail.classList.contains('active')) {
-        detail.classList.remove('active');
-        btn.textContent = 'Detayları Göster';
-      } else {
-        // Aynı anda sadece bir detay açılması için
-        document.querySelectorAll('.product-detail.active').forEach(d => {
-          d.classList.remove('active');
-          d.parentElement.querySelector('.toggle-btn').textContent = 'Detayları Göster';
-        });
-        detail.classList.add('active');
-        btn.textContent = 'Kapat';
-      }
-    }
-  </script>
-
-</body>
-</html>
+  <h2>🐟 Canlı</h2>
+  <div class="scroll-section">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2021/08/05/11/20/fish-6522766_1280.jpg" alt="Neon Tetra" />
+      <h3>Neon Tetra</h3>
+      <p>Renkli ve uyumlu sürü balıkları.</p>
+      <
