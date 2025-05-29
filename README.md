@@ -169,7 +169,7 @@
 <body>
 
 <header>
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo">
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo" />
   <h1>Cesur Akvaryum</h1>
 </header>
 
@@ -239,155 +239,175 @@
 <!-- Bitki İçeriği -->
 <div id="bitki" class="tab-content">
   <div class="scroll-section">
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/01/plant-2178750_1280.jpg" alt="Bitki" />
-      <h3>Akvaryum Bitkisi</h3>
-      <p>Canlı ve sağlıklı akvaryum bitkileri.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/06/08/17/42/aquarium-2380972_1280.jpg" alt="Java Fern" />
+      <h3>Java Fern (Microsorum pteropus)</h3>
+      <p>Az ışıkta dayanıklı, bakımı kolay.</p>
       <div class="product-detail">
-        Doğal ortamı canlandıran bitkilerle su kalitesi artar, estetik zenginleşir.
+        <strong>Tür:</strong> Eğrelti otu ailesinden <br />
+        <strong>Yerleşim:</strong> Kaya veya kök üzerine bağlanmalı <br />
+        <strong>Bakım:</strong> Düşük ila orta ışık, az besin gerektirir <br />
+        <strong>Boy:</strong> 12-15 cm <br />
+        Java Fern, az ışıklı akvaryumlarda başarılı olur. Yapraklarını çürüten balıklara karşı dayanıklıdır.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/19/12/58/plant-1836993_1280.jpg" alt="Anubias" />
+      <h3>Anubias (Anubias barteri)</h3>
+      <p>Yavaş büyüyen, dayanıklı.</p>
+      <div class="product-detail">
+        <strong>Tür:</strong> Araceae ailesinden <br />
+        <strong>Yerleşim:</strong> Kök veya kaya üstüne bağlanmalı <br />
+        <strong>Bakım:</strong> Düşük ışık, yavaş büyüme <br />
+        <strong>Boy:</strong> 10-20 cm <br />
+        Anubias, dayanıklı yapısıyla akvaryumlarda popülerdir. Balıkların yaprakları yemesinden az etkilenir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/07/14/15/05/aquarium-1512306_1280.jpg" alt="Amazon Sword" />
+      <h3>Amazon Sword (Echinodorus amazonicus)</h3>
+      <p>Geniş yapraklı, orta ışıkta iyi gelişir.</p>
+      <div class="product-detail">
+        <strong>Tür:</strong> Alismataceae ailesinden <br />
+        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
+        <strong>Bakım:</strong> Orta ışık ve besinler gerektirir <br />
+        <strong>Boy:</strong> 20-50 cm <br />
+        Amazon Sword, akvaryum tabanına zenginlik katar ve balıklar için iyi saklanma alanı sağlar.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2015/05/25/17/02/plant-783189_1280.jpg" alt="Cryptocoryne" />
+      <h3>Cryptocoryne</h3>
+      <p>Farklı renk ve yaprak formları.</p>
+      <div class="product-detail">
+        <strong>Tür:</strong> Araceae ailesinden <br />
+        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
+        <strong>Bakım:</strong> Orta ışık, düzenli besin <br />
+        <strong>Boy:</strong> 15-30 cm <br />
+        Cryptocoryne, değişik renk tonları ile akvaryuma estetik katar. Adaptasyon süreci bazen yavaştır.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Vallisneria" />
+      <h3>Vallisneria</h3>
+      <p>Uzun yapraklarıyla arka plan bitkisi.</p>
+      <div class="product-detail">
+        <strong>Tür:</strong> Hydrocharitaceae ailesinden <br />
+        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
+        <strong>Bakım:</strong> Orta ila yüksek ışık <br />
+        <strong>Boy:</strong> 30-60 cm <br />
+        Vallisneria, hızlı büyüyen ve akvaryumun arka planında güzel görsel oluşturur.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
   </div>
 </div>
 
 <!-- Canlı İçeriği -->
 <div id="canli" class="tab-content">
   <div class="scroll-section">
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2021/08/05/11/20/fish-6522766_1280.jpg" alt="Neon Tetra" />
-      <h3>Neon Tetra</h3>
-      <p>Renkli ve uyumlu sürü balıkları.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/06/20/18/08/fish-2422507_1280.jpg" alt="Neon Tetrafish" />
+      <h3>Neon Tetrafish</h3>
+      <p>Canlı renkleriyle popüler küçük balık.</p>
       <div class="product-detail">
-        Neon tetra, barışçıl doğası ve canlı renkleriyle en çok tercih edilen balıklardandır.
+        Neon Tetrafish, barışçıl sürü balığıdır ve düşük bakım gerektirir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2022/08/30/17/36/betta-7421979_1280.jpg" alt="Beta Balığı" />
-      <h3>Beta Balığı</h3>
-      <p>Tek başına bakılabilen görkemli balık.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/20/51/fish-1283654_1280.jpg" alt="Betta Balığı" />
+      <h3>Betta Balığı</h3>
+      <p>Tek başına yaşayan, renkli yüzgeçli.</p>
       <div class="product-detail">
-        Renkli yüzgeçleriyle dikkat çeken beta balığı, agresif yapısıyla bilinir ve yalnız bakılması önerilir.
+        Betta, agresif olabilir; tek başına beslenmelidir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2021/02/28/17/04/fish-6059249_1280.jpg" alt="Lepistes" />
-      <h3>Lepistes</h3>
-      <p>Kolay bakımı ile sevilen balık.</p>
+      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Guppy" />
+      <h3>Guppy</h3>
+      <p>Kolay üreyen, renkli küçük balık.</p>
       <div class="product-detail">
-        Lepistesler dayanıklı ve hızlı çoğalan balıklardır. 22-28°C arasında iyi yaşar.
+        Guppy, hızlı çoğalan ve canlı renkli akvaryum balığıdır.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/12/11/14/28/pleco-3019951_1280.jpg" alt="Çöpçü Balığı" />
-      <h3>Çöpçü Balığı</h3>
-      <p>Dip temizleyici ve uyumlu canlı.</p>
+      <img src="https://cdn.pixabay.com/photo/2015/12/09/20/02/fish-1082164_1280.jpg" alt="Corydoras" />
+      <h3>Corydoras</h3>
+      <p>Dip temizleyici ve barışçıl.</p>
       <div class="product-detail">
-        Çöpçü balıkları tankın dip kısmını temizler, 23-28°C sıcaklık arası tercih eder.
+        Corydoras, akvaryum tabanını temizler ve sosyal balıktır.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/06/11/18/38/apple-snail-365696_1280.jpg" alt="Elma Salyangozu" />
-      <h3>Elma Salyangozu</h3>
-      <p>Yosunlarla beslenen temizlikçi.</p>
-      <div class="product-detail">
-        Elma salyangozları, tankın yosunlarını temizleyerek doğal denge sağlar.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
+
   </div>
 </div>
 
-<!-- Bilgi Butonu -->
 <button id="BilgiBtn">Bilgi</button>
 
-<!-- Bilgi Modal -->
+<!-- Modal -->
 <div id="infoModal">
-  <h2>Bilgi</h2>
-  <div id="infoContent"></div>
+  <h2>Cesur Akvaryum Bilgileri</h2>
+  <p>
+    Bu web sitesi, akvaryum, bitki ve canlı çeşitleri hakkında detaylı bilgiler sunar. Her sekmede ürün kartları bulunmaktadır. Kartların altında "Detayları Göster" butonuna tıklayarak ürün hakkında daha fazla bilgi alabilirsiniz.
+  </p>
   <button onclick="closeModal()">Kapat</button>
 </div>
 
 <script>
-  // Tablar arası geçiş
-  function openTab(tabId, btn) {
-    document.querySelectorAll('.tab-content').forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.querySelectorAll('.tab-button').forEach(button => {
-      button.classList.remove('active');
-    });
+  function openTab(tabId, el) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-button');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
     document.getElementById(tabId).classList.add('active');
-    btn.classList.add('active');
+    el.classList.add('active');
   }
 
-  // Detay göster/gizle butonu
   function toggleDetail(button) {
     const detail = button.previousElementSibling;
-    const isActive = detail.classList.contains('active');
-    if (isActive) {
+    if(detail.classList.contains('active')) {
       detail.classList.remove('active');
-      button.textContent = 'Detayları Göster';
+      button.textContent = "Detayları Göster";
     } else {
       detail.classList.add('active');
-      button.textContent = 'Detayları Gizle';
+      button.textContent = "Detayları Gizle";
     }
   }
 
-  // Bilgi butonu işlevi
-  document.getElementById('BilgiBtn').addEventListener('click', function() {
-    const activeTab = document.querySelector('.tab-content.active');
-    if (!activeTab) return;
+  const bilgiBtn = document.getElementById('BilgiBtn');
+  const infoModal = document.getElementById('infoModal');
 
-    const tabId = activeTab.id;
-    let bilgi = '';
-
-    if(tabId === 'akvaryum') {
-      bilgi = `
-        <strong>Akvaryum Çeşitleri ve Yaşam Koşulları:</strong><br><br>
-        <ul>
-          <li><strong>Küçük Cam Akvaryum:</strong> Küçük hacimlerde, küçük balıklar için uygundur. Sık temizlik gerekir.</li>
-          <li><strong>Büyük Cam Akvaryum:</strong> Geniş hacim, büyük balıklar ve bitkiler için ideal. Filtrasyon önemli.</li>
-          <li><strong>Yuvarlak Akvaryum:</strong> Dekoratif, küçük balıklar için uygun. Yüzgeçleri zarar görebilir.</li>
-          <li><strong>Dekoratif Akvaryum:</strong> Mobilyaya entegre, küçük balıklar için uygundur. Su kalitesi takip edilmeli.</li>
-          <li><strong>Küp Akvaryum:</strong> Kare şekilli, küçük ila orta balıklar için ideal. Bitki çeşitleriyle desteklenmeli.</li>
-        </ul>
-      `;
-    } else if(tabId === 'bitki') {
-      bilgi = `
-        <strong>Akvaryum Bitkileri ve Yaşam Koşulları:</strong><br><br>
-        <ul>
-          <li><strong>Akvaryum Bitkisi:</strong> Doğal ortam sağlar. Işık, CO₂ ve uygun sıcaklık gerekir.</li>
-          <li><em>Genel Koşullar:</em> 22-28°C arası sıcaklık, yeterli aydınlatma ve düzenli gübreleme bitkiler için önemlidir.</li>
-        </ul>
-      `;
-    } else if(tabId === 'canli') {
-      bilgi = `
-        <strong>Canlılar ve Yaşam Koşulları:</strong><br><br>
-        <ul>
-          <li><strong>Neon Tetra:</strong> Sürüler halinde barışçıl, 20-26°C sıcaklık ve yumuşak su sever.</li>
-          <li><strong>Beta Balığı:</strong> Tek başına bakılmalı, 24-30°C sıcaklık ve temiz su gerekir.</li>
-          <li><strong>Lepistes:</strong> Kolay bakılır, 22-28°C sıcaklık ve dengeli beslenme ister.</li>
-          <li><strong>Çöpçü Balığı:</strong> Dip temizleyici, 23-28°C arası sıcaklıkta aktif olur.</li>
-          <li><strong>Elma Salyangozu:</strong> Yosunlarla beslenir, su kalitesi yüksek olmalı.</li>
-        </ul>
-      `;
-    } else {
-      bilgi = 'Aktif sekme bulunamadı veya bilgi yok.';
-    }
-
-    document.getElementById('infoContent').innerHTML = bilgi;
-    document.getElementById('infoModal').style.display = 'block';
+  bilgiBtn.addEventListener('click', () => {
+    infoModal.style.display = 'block';
   });
 
-  // Modal kapatma
   function closeModal() {
-    document.getElementById('infoModal').style.display = 'none';
+    infoModal.style.display = 'none';
   }
+
+  window.onclick = function(event) {
+    if(event.target == infoModal) {
+      closeModal();
+    }
+  };
 </script>
 
 </body>
