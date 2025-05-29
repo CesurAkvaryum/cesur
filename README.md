@@ -28,7 +28,6 @@
       font-weight: 900;
       font-size: 2rem;
     }
-
     .tabs {
       display: flex;
       justify-content: center;
@@ -49,14 +48,12 @@
       background-color: #00796b;
       color: white;
     }
-
     .tab-content {
       display: none;
     }
     .tab-content.active {
       display: block;
     }
-
     .scroll-section {
       display: flex;
       overflow-x: auto;
@@ -133,7 +130,6 @@
   <h1>Cesur Akvaryum</h1>
 </header>
 
-<!-- Sekme Butonları -->
 <div class="tabs">
   <button class="tab-button active" onclick="openTab('akvaryum', this)">🐠 Akvaryum</button>
   <button class="tab-button" onclick="openTab('bitki', this)">🌿 Bitki</button>
@@ -143,15 +139,57 @@
 <!-- Akvaryum İçeriği -->
 <div id="akvaryum" class="tab-content active">
   <div class="scroll-section">
+
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2020/02/14/17/59/aquarium-4848120_1280.jpg" alt="Cam Akvaryum" />
-      <h3>Cam Akvaryum</h3>
-      <p>Şık ve dayanıklı cam akvaryum çeşitleri.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/fish-tank-1866863_1280.jpg" alt="Küçük Cam Akvaryum" />
+      <h3>Küçük Cam Akvaryum</h3>
+      <p>Kompakt tasarımıyla her alana uygun.</p>
       <div class="product-detail">
-        Cam akvaryumlar, net görünüm ve dayanıklılığı ile tercih edilir. Farklı boyut ve şekillerde mevcuttur.
+        Küçük boyutlu, minimal alanlarda kullanım için ideal cam akvaryum.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Büyük Cam Akvaryum" />
+      <h3>Büyük Cam Akvaryum</h3>
+      <p>Geniş hacimli gösterişli akvaryum.</p>
+      <div class="product-detail">
+        200 litrelik bu model, büyük balık grupları için uygundur.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/01/05/13/58/aquarium-1129108_1280.jpg" alt="Yuvarlak Akvaryum" />
+      <h3>Yuvarlak Akvaryum</h3>
+      <p>Modern ve estetik tasarım.</p>
+      <div class="product-detail">
+        Masa üstü veya dekoratif alanlar için ideal yuvarlak cam akvaryum.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2015/11/03/08/57/aquarium-1015297_1280.jpg" alt="Dekoratif Akvaryum" />
+      <h3>Dekoratif Akvaryum</h3>
+      <p>Mobilyaya entegre edilebilir şık model.</p>
+      <div class="product-detail">
+        Şık bir sehpa veya masa içine entegre edilebilir akvaryum modelidir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/aquarium-1865159_1280.jpg" alt="Küp Akvaryum" />
+      <h3>Küp Akvaryum</h3>
+      <p>Temiz çizgilerle modern akvaryum keyfi.</p>
+      <div class="product-detail">
+        Kare yapılı küp akvaryumlar küçük alanlar için tercih edilir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
   </div>
 </div>
 
@@ -190,7 +228,6 @@
   function openTab(tabId, buttonElement) {
     document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    
     document.getElementById(tabId).classList.add('active');
     buttonElement.classList.add('active');
   }
