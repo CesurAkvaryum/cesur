@@ -419,4 +419,21 @@
 </script>
 
 </body>
+<section aria-label="İletişim Bilgileri" style="
+  background-color: #004d40;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+">
+  <h2 style="margin-bottom: 16px; font-weight: 900;">İletişim</h2>
+  <p>Telefon: <a href="tel:+905013761533" style="color: #80cbc4; text-decoration: none;">0 501 376 15 33</a></p>
+  <p>E-posta: <a href="mailto:info@cesurakvaryum.com" style="color: #80cbc4; text-decoration: none;">info@cesurakvaryum.com</a></p>
+  <p>Adres: Aksaray / Merkez, Türkiye</p>
+</section>
 </html>
