@@ -105,6 +105,7 @@
       color: #004d40;
       font-size: 14px;
       line-height: 1.4;
+      text-align: left;
     }
     .product-detail.active {
       display: block;
@@ -226,9 +227,9 @@
     <div class="product-card">
       <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/aquarium-1865159_1280.jpg" alt="Küp Akvaryum" />
       <h3>Küp Akvaryum</h3>
-      <p>Temiz çizgilerle modern akvaryum keyfi.</p>
+      <p>Kompakt, kolay yerleştirilebilir.</p>
       <div class="product-detail">
-        Kare yapılı küp akvaryumlar küçük alanlar için tercih edilir.
+        Minimal tasarımı ile küçük alanlara uygun küp şeklinde akvaryum.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -239,77 +240,35 @@
 <!-- Bitki İçeriği -->
 <div id="bitki" class="tab-content">
   <div class="scroll-section">
-
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/06/08/17/42/aquarium-2380972_1280.jpg" alt="Java Fern" />
-      <h3>Java Fern (Microsorum pteropus)</h3>
-      <p>Az ışıkta dayanıklı, bakımı kolay.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/07/02/22/04/plant-2475494_1280.jpg" alt="Java Moss" />
+      <h3>Java Moss</h3>
+      <p>Kolay bakımlı su bitkisi.</p>
       <div class="product-detail">
-        <strong>Tür:</strong> Eğrelti otu ailesinden <br />
-        <strong>Yerleşim:</strong> Kaya veya kök üzerine bağlanmalı <br />
-        <strong>Bakım:</strong> Düşük ila orta ışık, az besin gerektirir <br />
-        <strong>Boy:</strong> 12-15 cm <br />
-        Java Fern, az ışıklı akvaryumlarda başarılı olur. Yapraklarını çürüten balıklara karşı dayanıklıdır.
+        Havadar yapısıyla akvaryum dekorasyonunda tercih edilir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/11/19/12/58/plant-1836993_1280.jpg" alt="Anubias" />
-      <h3>Anubias (Anubias barteri)</h3>
-      <p>Yavaş büyüyen, dayanıklı.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/02/12/11/00/plant-1192544_1280.jpg" alt="Anubias" />
+      <h3>Anubias</h3>
+      <p>Dayanıklı ve dekoratif bitki.</p>
       <div class="product-detail">
-        <strong>Tür:</strong> Araceae ailesinden <br />
-        <strong>Yerleşim:</strong> Kök veya kaya üstüne bağlanmalı <br />
-        <strong>Bakım:</strong> Düşük ışık, yavaş büyüme <br />
-        <strong>Boy:</strong> 10-20 cm <br />
-        Anubias, dayanıklı yapısıyla akvaryumlarda popülerdir. Balıkların yaprakları yemesinden az etkilenir.
+        Düşük ışıkta da yaşayabilen yavaş büyüyen bitki türü.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/07/14/15/05/aquarium-1512306_1280.jpg" alt="Amazon Sword" />
-      <h3>Amazon Sword (Echinodorus amazonicus)</h3>
-      <p>Geniş yapraklı, orta ışıkta iyi gelişir.</p>
-      <div class="product-detail">
-        <strong>Tür:</strong> Alismataceae ailesinden <br />
-        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
-        <strong>Bakım:</strong> Orta ışık ve besinler gerektirir <br />
-        <strong>Boy:</strong> 20-50 cm <br />
-        Amazon Sword, akvaryum tabanına zenginlik katar ve balıklar için iyi saklanma alanı sağlar.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2015/05/25/17/02/plant-783189_1280.jpg" alt="Cryptocoryne" />
+      <img src="https://cdn.pixabay.com/photo/2018/09/07/23/29/plant-3669950_1280.jpg" alt="Cryptocoryne" />
       <h3>Cryptocoryne</h3>
-      <p>Farklı renk ve yaprak formları.</p>
+      <p>Gölge seven akvaryum bitkisi.</p>
       <div class="product-detail">
-        <strong>Tür:</strong> Araceae ailesinden <br />
-        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
-        <strong>Bakım:</strong> Orta ışık, düzenli besin <br />
-        <strong>Boy:</strong> 15-30 cm <br />
-        Cryptocoryne, değişik renk tonları ile akvaryuma estetik katar. Adaptasyon süreci bazen yavaştır.
+        Sakin sularda ve düşük ışıkta iyi gelişir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Vallisneria" />
-      <h3>Vallisneria</h3>
-      <p>Uzun yapraklarıyla arka plan bitkisi.</p>
-      <div class="product-detail">
-        <strong>Tür:</strong> Hydrocharitaceae ailesinden <br />
-        <strong>Yerleşim:</strong> Substrat içinde köklenmeli <br />
-        <strong>Bakım:</strong> Orta ila yüksek ışık <br />
-        <strong>Boy:</strong> 30-60 cm <br />
-        Vallisneria, hızlı büyüyen ve akvaryumun arka planında güzel görsel oluşturur.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
   </div>
 </div>
 
@@ -318,41 +277,65 @@
   <div class="scroll-section">
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/06/20/18/08/fish-2422507_1280.jpg" alt="Neon Tetrafish" />
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/19/48/fish-1285401_1280.jpg" alt="Neon Tetrafish" />
       <h3>Neon Tetrafish</h3>
       <p>Canlı renkleriyle popüler küçük balık.</p>
       <div class="product-detail">
-        Neon Tetrafish, barışçıl sürü balığıdır ve düşük bakım gerektirir.
+        <strong>Tür:</strong> Paracheirodon innesi<br />
+        <strong>Boy:</strong> 3-4 cm<br />
+        <strong>Yaşam Süresi:</strong> 5 yıl<br />
+        <strong>Beslenme:</strong> Omnivor, küçük canlı yem ve pul yem<br />
+        <strong>Davranış:</strong> Barışçıl, sürü halinde yaşar<br /><br />
+        <strong>Genel Canlı Özellikleri:</strong><br />
+        Tüm canlılar hücrelerden oluşur, metabolizmaya sahiptir, büyür, çoğalır ve çevrelerine uyum sağlarlar. Neon Tetrafish, solungaçlarıyla solunum yapar ve sürü halinde yaşayarak sosyal davranışlar sergiler.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/20/51/fish-1283654_1280.jpg" alt="Betta Balığı" />
-      <h3>Betta Balığı</h3>
-      <p>Tek başına yaşayan, renkli yüzgeçli.</p>
-      <div class="product-detail">
-        Betta, agresif olabilir; tek başına beslenmelidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Guppy" />
+      <img src="https://cdn.pixabay.com/photo/2018/01/30/18/57/fish-3120607_1280.jpg" alt="Guppy" />
       <h3>Guppy</h3>
-      <p>Kolay üreyen, renkli küçük balık.</p>
+      <p>Canlı renkleri ve hareketli yapısı.</p>
       <div class="product-detail">
-        Guppy, hızlı çoğalan ve canlı renkli akvaryum balığıdır.
+        <strong>Tür:</strong> Poecilia reticulata<br />
+        <strong>Boy:</strong> 4-6 cm<br />
+        <strong>Yaşam Süresi:</strong> 3-5 yıl<br />
+        <strong>Beslenme:</strong> Omnivor, pul yem ve küçük canlı yem<br />
+        <strong>Davranış:</strong> Barışçıl, sürü halinde yaşar<br /><br />
+        <strong>Genel Canlı Özellikleri:</strong><br />
+        Canlılar hücrelerden oluşur, metabolizma yapar ve çevresine uyum sağlar. Guppy, hızlı çoğalan türlerdendir ve renkli yapısıyla akvaryumlarda popülerdir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2015/12/09/20/02/fish-1082164_1280.jpg" alt="Corydoras" />
-      <h3>Corydoras</h3>
-      <p>Dip temizleyici ve barışçıl.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/10/04/22/39/fish-1714686_1280.jpg" alt="Betta" />
+      <h3>Betta</h3>
+      <p>Güçlü ve gösterişli yüzgeçlere sahip balık.</p>
       <div class="product-detail">
-        Corydoras, akvaryum tabanını temizler ve sosyal balıktır.
+        <strong>Tür:</strong> Betta splendens<br />
+        <strong>Boy:</strong> 6-7 cm<br />
+        <strong>Yaşam Süresi:</strong> 3-4 yıl<br />
+        <strong>Beslenme:</strong> Etçil, canlı yem tercih eder<br />
+        <strong>Davranış:</strong> Tek başına veya küçük gruplar halinde yaşar<br /><br />
+        <strong>Genel Canlı Özellikleri:</strong><br />
+        Canlılar solunum, beslenme, üreme gibi temel fonksiyonları yerine getirir. Betta, agresif olabilir, bu yüzden akvaryumda dikkatli beslenmelidir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/04/28/23/23/fish-1352561_1280.jpg" alt="Moli Balığı" />
+      <h3>Moli Balığı</h3>
+      <p>Dayanıklı ve uyumlu tatlı su balığı.</p>
+      <div class="product-detail">
+        <strong>Tür:</strong> Poecilia sphenops<br />
+        <strong>Boy:</strong> 6-7 cm<br />
+        <strong>Yaşam Süresi:</strong> 3-5 yıl<br />
+        <strong>Beslenme:</strong> Omnivor, çeşitli yemler<br />
+        <strong>Davranış:</strong> Barışçıl, sosyal balık<br /><br />
+        <strong>Genel Canlı Özellikleri:</strong><br />
+        Canlılar metabolizma ile enerji üretir ve çevresel değişimlere adapte olur. Moli, akvaryumlarda kolay bakımı ile tercih edilir.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -360,54 +343,43 @@
   </div>
 </div>
 
-<button id="BilgiBtn">Bilgi</button>
+<button id="BilgiBtn" onclick="showInfo()">Bilgi</button>
 
 <!-- Modal -->
 <div id="infoModal">
-  <h2>Cesur Akvaryum Bilgileri</h2>
+  <h2>Genel Canlı Özellikleri</h2>
   <p>
-    Bu web sitesi, akvaryum, bitki ve canlı çeşitleri hakkında detaylı bilgiler sunar. Her sekmede ürün kartları bulunmaktadır. Kartların altında "Detayları Göster" butonuna tıklayarak ürün hakkında daha fazla bilgi alabilirsiniz.
+    Canlılar; hücrelerden oluşur, metabolizma ile enerji üretir, büyür, çevresine uyum sağlar ve çoğalır. Solunum, beslenme, hareket ve üreme gibi temel yaşamsal faaliyetleri gerçekleştirirler. Suda yaşayan canlılar genellikle solungaçlarıyla nefes alır, beslenme şekilleri türlere göre değişir ve ekosistemde önemli roller üstlenirler.
   </p>
-  <button onclick="closeModal()">Kapat</button>
+  <button onclick="closeInfo()">Kapat</button>
 </div>
 
 <script>
-  function openTab(tabId, el) {
-    const tabs = document.querySelectorAll('.tab-content');
-    const buttons = document.querySelectorAll('.tab-button');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    buttons.forEach(btn => btn.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
+  function openTab(tabName, el) {
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
     el.classList.add('active');
+
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabName).classList.add('active');
   }
 
-  function toggleDetail(button) {
-    const detail = button.previousElementSibling;
-    if(detail.classList.contains('active')) {
-      detail.classList.remove('active');
-      button.textContent = "Detayları Göster";
-    } else {
-      detail.classList.add('active');
-      button.textContent = "Detayları Gizle";
-    }
+  function toggleDetail(btn) {
+    const detail = btn.previousElementSibling;
+    detail.classList.toggle('active');
+    btn.textContent = detail.classList.contains('active') ? 'Detayları Gizle' : 'Detayları Göster';
   }
 
-  const bilgiBtn = document.getElementById('BilgiBtn');
-  const infoModal = document.getElementById('infoModal');
-
-  bilgiBtn.addEventListener('click', () => {
-    infoModal.style.display = 'block';
-  });
-
-  function closeModal() {
-    infoModal.style.display = 'none';
+  // Modal açma
+  function showInfo() {
+    document.getElementById('infoModal').style.display = 'block';
   }
 
-  window.onclick = function(event) {
-    if(event.target == infoModal) {
-      closeModal();
-    }
-  };
+  // Modal kapama
+  function closeInfo() {
+    document.getElementById('infoModal').style.display = 'none';
+  }
 </script>
 
 </body>
