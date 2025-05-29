@@ -13,11 +13,10 @@
     header {
       background-color: #00838f;
       color: white;
-      padding: 20px;
+      padding: 20px 30px;
       display: flex;
       align-items: center;
       gap: 15px;
-      padding-left: 30px;
     }
     header img {
       width: 48px;
@@ -106,9 +105,21 @@
       font-size: 14px;
       line-height: 1.4;
       text-align: left;
+      margin-top: 12px;
     }
     .product-detail.active {
       display: block;
+    }
+    .product-detail h4 {
+      margin: 10px 0 6px;
+      color: #004d40;
+      border-bottom: 1px solid #00796b;
+      padding-bottom: 3px;
+    }
+    .product-detail ul {
+      margin: 0 0 10px 18px;
+      padding: 0;
+      list-style-type: disc;
     }
     .toggle-btn {
       position: absolute;
@@ -210,7 +221,20 @@
       <h3>Küçük Cam Akvaryum</h3>
       <p>Kompakt tasarımıyla her alana uygun.</p>
       <div class="product-detail">
-        Küçük boyutlu, minimal alanlarda kullanım için ideal cam akvaryum.
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Malzeme: Temperli cam</li>
+          <li>Kapak: Var</li>
+          <li>Aydınlatma: LED</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su Sıcaklığı: 22-26°C</li>
+          <li>pH: 6.5-7.5</li>
+          <li>Filtrasyon: Zorunlu</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 30 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -220,7 +244,20 @@
       <h3>Büyük Cam Akvaryum</h3>
       <p>Geniş hacimli gösterişli akvaryum.</p>
       <div class="product-detail">
-        200 litrelik bu model, büyük balık grupları için uygundur.
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Malzeme: Temperli cam</li>
+          <li>Kapak: Var</li>
+          <li>Aydınlatma: LED ve UV</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su Sıcaklığı: 20-28°C</li>
+          <li>pH: 6.8-7.8</li>
+          <li>Filtrasyon: Zorunlu</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 200 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -230,7 +267,20 @@
       <h3>Yuvarlak Akvaryum</h3>
       <p>Modern ve estetik tasarım.</p>
       <div class="product-detail">
-        Masa üstü veya dekoratif alanlar için ideal yuvarlak cam akvaryum.
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Malzeme: Cam</li>
+          <li>Kapak: Yok</li>
+          <li>Aydınlatma: Harici LED</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su Sıcaklığı: 22-26°C</li>
+          <li>pH: 6.5-7.0</li>
+          <li>Filtrasyon: Tavsiye Edilir</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -240,17 +290,20 @@
       <h3>Dekoratif Akvaryum</h3>
       <p>Mobilyaya entegre edilebilir şık model.</p>
       <div class="product-detail">
-        Şık bir sehpa veya masa içine entegre edilebilir akvaryum modelidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/aquarium-1865159_1280.jpg" alt="Küp Akvaryum" />
-      <h3>Küp Akvaryum</h3>
-      <p>Kompakt, kolay yerleştirilebilir.</p>
-      <div class="product-detail">
-        Minimal tasarımı ile küçük alanlara uygun küp şeklinde akvaryum.
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Malzeme: Temperli cam</li>
+          <li>Kapak: Var</li>
+          <li>Aydınlatma: LED renkli</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su Sıcaklığı: 20-25°C</li>
+          <li>pH: 6.5-7.2</li>
+          <li>Filtrasyon: Zorunlu</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 80 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -263,57 +316,70 @@
   <div class="scroll-section">
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/07/02/22/04/plant-2475494_1280.jpg" alt="Java Moss" />
+      <img src="https://cdn.pixabay.com/photo/2016/11/18/15/44/water-plants-1837096_1280.jpg" alt="Amazon Kılıç Bitkisi" />
+      <h3>Amazon Kılıç Bitkisi</h3>
+      <p>Dayanıklı ve hızlı büyüyen bitki.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Tip: Canlı bitki</li>
+          <li>Uzunluk: 30-50 cm</li>
+          <li>Işık İhtiyacı: Orta</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 22-28°C</li>
+          <li>pH: 6.5-7.5</li>
+          <li>CO2 takviyesi: Tavsiye edilir</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 50 litre</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/04/06/20/44/aquatic-plant-1318573_1280.jpg" alt="Java Moss" />
       <h3>Java Moss</h3>
-      <p>Kolay bakımlı su bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Taxiphyllum barbieri<br />
-        <strong>Işık:</strong> Düşük ila orta<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Java Moss, akvaryumda dekoratif ve bakımı kolay bir bitkidir. Balıklar için saklanma alanı sağlar.
+      <p>Kolay bakımlı, dekoratif yosun.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Tip: Moss</li>
+          <li>Büyüme Hızı: Yavaş</li>
+          <li>Işık İhtiyacı: Düşük</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 20-26°C</li>
+          <li>pH: 6.0-7.5</li>
+          <li>CO2 takviyesi: Gerekli değil</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 30 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/07/02/22/04/plant-2475498_1280.jpg" alt="Anubias" />
-      <h3>Anubias</h3>
-      <p>Dayanıklı gölge bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Anubias barteri<br />
-        <strong>Işık:</strong> Düşük<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Kolay<br />
-        <strong>Açıklama:</strong> Gölgeyi seven bu bitki, sert ve dayanıklıdır, yavaş büyür.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2019/11/23/11/19/water-4643921_1280.jpg" alt="Amazon Sword" />
-      <h3>Amazon Sword</h3>
-      <p>Büyük yapraklı arka plan bitkisi.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Echinodorus amazonicus<br />
-        <strong>Işık:</strong> Orta<br />
-        <strong>CO2:</strong> İyi<br />
-        <strong>Bakım:</strong> Orta<br />
-        <strong>Açıklama:</strong> Akvaryum arka planı için ideal büyük yapraklı bitkidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/19/18/plants-1282834_1280.jpg" alt="Cryptocoryne" />
-      <h3>Cryptocoryne</h3>
-      <p>Orta seviyede bakım gerektirir.</p>
-      <div class="product-detail" style="display:none;">
-        <strong>Tür:</strong> Cryptocoryne wendtii<br />
-        <strong>Işık:</strong> Düşük-orta<br />
-        <strong>CO2:</strong> Gerekmez<br />
-        <strong>Bakım:</strong> Orta<br />
-        <strong>Açıklama:</strong> Orta bakım gerektiren dayanıklı bitki türüdür.
+      <img src="https://cdn.pixabay.com/photo/2019/02/04/10/45/aquarium-3978287_1280.jpg" alt="Anubias Nana" />
+      <h3>Anubias Nana</h3>
+      <p>Düşük ışıkta da yaşayabilen bitki.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Tip: Rhizome bitki</li>
+          <li>Boy: 10-15 cm</li>
+          <li>Işık İhtiyacı: Düşük-orta</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 22-28°C</li>
+          <li>pH: 6.0-7.8</li>
+          <li>CO2 takviyesi: İsteğe bağlı</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -326,31 +392,70 @@
   <div class="scroll-section">
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/07/31/20/01/goldfish-2557117_1280.jpg" alt="Japon Balığı" />
-      <h3>Japon Balığı</h3>
-      <p>Popüler tatlı su balığı.</p>
-      <div class="product-detail" style="display:none;">
-        Popüler ve dayanıklı bir tatlı su balığı türüdür. Renkleri çeşitlidir.
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/07/30/20/07/neon-tetra-2550925_1280.jpg" alt="Neon Tetra" />
+      <img src="https://cdn.pixabay.com/photo/2017/02/12/16/39/neon-tetra-2057999_1280.jpg" alt="Neon Tetra" />
       <h3>Neon Tetra</h3>
-      <p>Canlı renkleriyle dikkat çeker.</p>
-      <div class="product-detail" style="display:none;">
-        Küçük ve sosyal balık türü, parlak mavi ve kırmızı renkleri vardır.
+      <p>Canlı ve renkli küçük balık.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Boy: 3-4 cm</li>
+          <li>Yaşam Süresi: 5 yıl</li>
+          <li>Davranış: Sürü balığı</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 20-26°C</li>
+          <li>pH: 6.0-7.0</li>
+          <li>Akvaryumda minimum 10 adet önerilir</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/08/02/13/35/discus-2578875_1280.jpg" alt="Discus Balığı" />
-      <h3>Discus Balığı</h3>
-      <p>Zor bakımı olan estetik balık.</p>
-      <div class="product-detail" style="display:none;">
-        Tropikal, renkli ve hassas bakımı gerektiren bir balık türüdür.
+      <img src="https://cdn.pixabay.com/photo/2018/05/31/21/16/goldfish-3441253_1280.jpg" alt="Japon Balığı" />
+      <h3>Japon Balığı</h3>
+      <p>Uzun ömürlü ve gösterişli balık.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Boy: 15-20 cm</li>
+          <li>Yaşam Süresi: 10-15 yıl</li>
+          <li>Davranış: Yavaş yüzücü</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 18-22°C</li>
+          <li>pH: 7.0-8.0</li>
+          <li>Akvaryumda tek veya grup</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 80 litre</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/guppy-540451_1280.jpg" alt="Guppy" />
+      <h3>Guppy</h3>
+      <p>Hızlı çoğalan küçük balık.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Boy: 4-6 cm</li>
+          <li>Yaşam Süresi: 3-4 yıl</li>
+          <li>Davranış: Canlı ve uyumlu</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 22-28°C</li>
+          <li>pH: 7.0-8.0</li>
+          <li>Akvaryumda çok sayıda bakılır</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -360,53 +465,57 @@
 
 <button id="BilgiBtn">Bilgi</button>
 
-<div id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" tabindex="-1">
-  <h2 id="infoModalTitle">Cesur Akvaryum Hakkında</h2>
-  <p>Türkiye'nin lider akvaryum ve akvaryum canlıları satıcısı.</p>
+<div id="infoModal">
+  <h2>Cesur Akvaryum Hakkında</h2>
+  <p>Cesur Akvaryum, akvaryum, canlı ve bitki alanlarında uzman bir satış platformudur. En kaliteli ürünleri sizlere sunar ve akvaryum hobinizi daha keyifli hale getirir.</p>
   <button onclick="closeModal()">Kapat</button>
 </div>
 
-<!-- İletişim Bölümü -->
-<section class="contact-section" aria-label="İletişim Bilgileri">
+<div class="contact-section">
   <h2>İletişim</h2>
-  <p>Telefon: <a href="tel:+905013761533">0 501 376 15 33</a></p>
-  <p>E-posta: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
-  <p>Adres: Aksaray / Merkez, Türkiye</p>
-</section>
+  <p><strong>Adres:</strong> 123 Akvaryum Sokak, İstanbul</p>
+  <p><strong>Telefon:</strong> +90 555 123 4567</p>
+  <p><strong>Email:</strong> <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
+</div>
 
 <script>
-  function openTab(tabId, btn) {
-    document.querySelectorAll('.tab-button').forEach(button => {
-      button.classList.remove('active');
+  function openTab(tabId, element) {
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    element.classList.add('active');
+
+    document.querySelectorAll('.tab-content').forEach(tc => {
+      tc.classList.remove('active');
     });
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-    btn.classList.add('active');
     document.getElementById(tabId).classList.add('active');
   }
 
-  function toggleDetail(btn) {
-    const detail = btn.previousElementSibling;
+  function toggleDetail(button) {
+    const detail = button.previousElementSibling;
     if (detail.classList.contains('active')) {
       detail.classList.remove('active');
-      btn.textContent = 'Detayları Göster';
+      button.textContent = 'Detayları Göster';
     } else {
       detail.classList.add('active');
-      btn.textContent = 'Detayları Gizle';
+      button.textContent = 'Detayları Gizle';
     }
   }
 
-  const infoModal = document.getElementById('infoModal');
   const infoBtn = document.getElementById('BilgiBtn');
+  const infoModal = document.getElementById('infoModal');
 
-  infoBtn.addEventListener('click', () => {
+  infoBtn.onclick = () => {
     infoModal.style.display = 'block';
-    infoModal.focus();
-  });
+  };
 
   function closeModal() {
     infoModal.style.display = 'none';
+  }
+
+  // Modal dışına tıklayınca kapatma
+  window.onclick = function(event) {
+    if (event.target == infoModal) {
+      closeModal();
+    }
   }
 </script>
 
