@@ -248,7 +248,7 @@
         <ul>
           <li>Malzeme: Temperli cam</li>
           <li>Kapak: Var</li>
-          <li>Aydınlatma: LED ve UV</li>
+          <li>Aydınlatma: LED</li>
         </ul>
         <h4>Yaşam Koşulları:</h4>
         <ul>
@@ -257,53 +257,7 @@
           <li>Filtrasyon: Zorunlu</li>
         </ul>
         <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 200 litre</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/01/05/13/58/aquarium-1129108_1280.jpg" alt="Yuvarlak Akvaryum" />
-      <h3>Yuvarlak Akvaryum</h3>
-      <p>Modern ve estetik tasarım.</p>
-      <div class="product-detail">
-        <h4>Özellikler:</h4>
-        <ul>
-          <li>Malzeme: Cam</li>
-          <li>Kapak: Yok</li>
-          <li>Aydınlatma: Harici LED</li>
-        </ul>
-        <h4>Yaşam Koşulları:</h4>
-        <ul>
-          <li>Su Sıcaklığı: 22-26°C</li>
-          <li>pH: 6.5-7.0</li>
-          <li>Filtrasyon: Tavsiye Edilir</li>
-        </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 40 litre</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2015/11/03/08/57/aquarium-1015297_1280.jpg" alt="Dekoratif Akvaryum" />
-      <h3>Dekoratif Akvaryum</h3>
-      <p>Mobilyaya entegre edilebilir şık model.</p>
-      <div class="product-detail">
-        <h4>Özellikler:</h4>
-        <ul>
-          <li>Malzeme: Temperli cam</li>
-          <li>Kapak: Var</li>
-          <li>Aydınlatma: LED renkli</li>
-        </ul>
-        <h4>Yaşam Koşulları:</h4>
-        <ul>
-          <li>Su Sıcaklığı: 20-25°C</li>
-          <li>pH: 6.5-7.2</li>
-          <li>Filtrasyon: Zorunlu</li>
-        </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 80 litre</p>
+        <p>Minimum hacim: 100 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -316,70 +270,43 @@
   <div class="scroll-section">
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/11/18/15/44/water-plants-1837096_1280.jpg" alt="Amazon Kılıç Bitkisi" />
-      <h3>Amazon Kılıç Bitkisi</h3>
-      <p>Dayanıklı ve hızlı büyüyen bitki.</p>
+      <img src="https://cdn.pixabay.com/photo/2018/05/22/16/06/aquarium-3428380_1280.jpg" alt="Anubias Bitkisi" />
+      <h3>Anubias Bitkisi</h3>
+      <p>Bakımı kolay, dayanıklı bir su bitkisi.</p>
       <div class="product-detail">
         <h4>Özellikler:</h4>
         <ul>
-          <li>Tip: Canlı bitki</li>
-          <li>Uzunluk: 30-50 cm</li>
-          <li>Işık İhtiyacı: Orta</li>
+          <li>Ortam: Tatlı su</li>
+          <li>Işık: Düşük-orta</li>
+          <li>Yayılma: Yavaş</li>
         </ul>
         <h4>Yaşam Koşulları:</h4>
         <ul>
-          <li>Su sıcaklığı: 22-28°C</li>
-          <li>pH: 6.5-7.5</li>
-          <li>CO2 takviyesi: Tavsiye edilir</li>
-        </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 50 litre</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
-
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2016/04/06/20/44/aquatic-plant-1318573_1280.jpg" alt="Java Moss" />
-      <h3>Java Moss</h3>
-      <p>Kolay bakımlı, dekoratif yosun.</p>
-      <div class="product-detail">
-        <h4>Özellikler:</h4>
-        <ul>
-          <li>Tip: Moss</li>
-          <li>Büyüme Hızı: Yavaş</li>
-          <li>Işık İhtiyacı: Düşük</li>
-        </ul>
-        <h4>Yaşam Koşulları:</h4>
-        <ul>
-          <li>Su sıcaklığı: 20-26°C</li>
+          <li>Su Sıcaklığı: 22-28°C</li>
           <li>pH: 6.0-7.5</li>
-          <li>CO2 takviyesi: Gerekli değil</li>
+          <li>Besin: Yeterli CO2</li>
         </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 30 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2019/02/04/10/45/aquarium-3978287_1280.jpg" alt="Anubias Nana" />
-      <h3>Anubias Nana</h3>
-      <p>Düşük ışıkta da yaşayabilen bitki.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/09/24/18/46/water-2779367_1280.jpg" alt="Java Moss Bitkisi" />
+      <h3>Java Moss Bitkisi</h3>
+      <p>Yosun görünümlü popüler su bitkisi.</p>
       <div class="product-detail">
         <h4>Özellikler:</h4>
         <ul>
-          <li>Tip: Rhizome bitki</li>
-          <li>Boy: 10-15 cm</li>
-          <li>Işık İhtiyacı: Düşük-orta</li>
+          <li>Ortam: Tatlı su</li>
+          <li>Işık: Düşük</li>
+          <li>Yayılma: Hızlı</li>
         </ul>
         <h4>Yaşam Koşulları:</h4>
         <ul>
-          <li>Su sıcaklığı: 22-28°C</li>
-          <li>pH: 6.0-7.8</li>
-          <li>CO2 takviyesi: İsteğe bağlı</li>
+          <li>Su Sıcaklığı: 20-26°C</li>
+          <li>pH: 6.0-7.0</li>
+          <li>Besin: Az CO2</li>
         </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
@@ -392,21 +319,21 @@
   <div class="scroll-section">
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2017/02/12/16/39/neon-tetra-2057999_1280.jpg" alt="Neon Tetra" />
-      <h3>Neon Tetra</h3>
-      <p>Canlı ve renkli küçük balık.</p>
+      <img src="https://cdn.pixabay.com/photo/2015/06/24/15/45/fish-820051_1280.jpg" alt="Kırmızı Plati" />
+      <h3>Kırmızı Plati</h3>
+      <p>Canlı renkleri ve dayanıklı yapısıyla sevilen.</p>
       <div class="product-detail">
         <h4>Özellikler:</h4>
         <ul>
-          <li>Boy: 3-4 cm</li>
-          <li>Yaşam Süresi: 5 yıl</li>
-          <li>Davranış: Sürü balığı</li>
+          <li>Boy: 5-6 cm</li>
+          <li>Davranış: Barışçıl, sürü balığı</li>
+          <li>Renk: Kırmızı tonları</li>
         </ul>
         <h4>Yaşam Koşulları:</h4>
         <ul>
-          <li>Su sıcaklığı: 20-26°C</li>
-          <li>pH: 6.0-7.0</li>
-          <li>Akvaryumda minimum 10 adet önerilir</li>
+          <li>Su sıcaklığı: 22-26°C</li>
+          <li>pH: 7.0-8.0</li>
+          <li>Filtrasyon: Orta seviyede</li>
         </ul>
         <h4>Akvaryum Boyutu:</h4>
         <p>Minimum hacim: 40 litre</p>
@@ -414,51 +341,78 @@
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
-    <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2018/05/31/21/16/goldfish-3441253_1280.jpg" alt="Japon Balığı" />
-      <h3>Japon Balığı</h3>
-      <p>Uzun ömürlü ve gösterişli balık.</p>
-      <div class="product-detail">
-        <h4>Özellikler:</h4>
-        <ul>
-          <li>Boy: 15-20 cm</li>
-          <li>Yaşam Süresi: 10-15 yıl</li>
-          <li>Davranış: Yavaş yüzücü</li>
-        </ul>
-        <h4>Yaşam Koşulları:</h4>
-        <ul>
-          <li>Su sıcaklığı: 18-22°C</li>
-          <li>pH: 7.0-8.0</li>
-          <li>Akvaryumda tek veya grup</li>
-        </ul>
-        <h4>Akvaryum Boyutu:</h4>
-        <p>Minimum hacim: 80 litre</p>
-      </div>
-      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
-    </div>
+    <!-- Yeni Ürünler Başlangıcı -->
 
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/guppy-540451_1280.jpg" alt="Guppy" />
-      <h3>Guppy</h3>
-      <p>Hızlı çoğalan küçük balık.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/01/06/17/05/shark-1958651_1280.jpg" alt="Pengasus Köpek Balığı" />
+      <h3>Pengasus Köpek Balığı</h3>
+      <p>Şık görünümü ve sakin yapısı ile popüler.</p>
       <div class="product-detail">
         <h4>Özellikler:</h4>
         <ul>
-          <li>Boy: 4-6 cm</li>
-          <li>Yaşam Süresi: 3-4 yıl</li>
-          <li>Davranış: Canlı ve uyumlu</li>
+          <li>Boy: 12-15 cm</li>
+          <li>Davranış: Barışçıl, gececi</li>
+          <li>Renk: Gri ve beyaz</li>
         </ul>
         <h4>Yaşam Koşulları:</h4>
         <ul>
           <li>Su sıcaklığı: 22-28°C</li>
-          <li>pH: 7.0-8.0</li>
-          <li>Akvaryumda çok sayıda bakılır</li>
+          <li>pH: 6.5-7.5</li>
+          <li>Filtrasyon: İyi seviyede</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 100 litre</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2017/05/30/23/11/shark-2351467_1280.jpg" alt="Challenger Köpek Balığı" />
+      <h3>Challenger Köpek Balığı</h3>
+      <p>Güçlü yapısı ve dikkat çekici görünümü.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Boy: 20-25 cm</li>
+          <li>Davranış: Agresif, korumacı</li>
+          <li>Renk: Siyah ve gri tonları</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 24-28°C</li>
+          <li>pH: 7.0-7.8</li>
+          <li>Filtrasyon: Yüksek performans</li>
+        </ul>
+        <h4>Akvaryum Boyutu:</h4>
+        <p>Minimum hacim: 150 litre</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2017/11/08/21/17/tetra-2936644_1280.jpg" alt="Genetik Tetra" />
+      <h3>Genetik Tetra</h3>
+      <p>Canlı renkleri ve dayanıklılığı ile tercih edilir.</p>
+      <div class="product-detail">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Boy: 3-5 cm</li>
+          <li>Davranış: Sosyal, sürü balığı</li>
+          <li>Renk: Parlak mavi ve kırmızı</li>
+        </ul>
+        <h4>Yaşam Koşulları:</h4>
+        <ul>
+          <li>Su sıcaklığı: 22-26°C</li>
+          <li>pH: 6.0-7.0</li>
+          <li>Filtrasyon: Orta seviyede</li>
         </ul>
         <h4>Akvaryum Boyutu:</h4>
         <p>Minimum hacim: 40 litre</p>
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
+
+    <!-- Yeni Ürünler Sonu -->
 
   </div>
 </div>
@@ -466,27 +420,26 @@
 <button id="BilgiBtn">Bilgi</button>
 
 <div id="infoModal">
-  <h2>Cesur Akvaryum Hakkında</h2>
-  <p>Cesur Akvaryum, akvaryum, canlı ve bitki alanlarında uzman bir satış platformudur. En kaliteli ürünleri sizlere sunar ve akvaryum hobinizi daha keyifli hale getirir.</p>
+  <h2>Cesur Akvaryum Bilgileri</h2>
+  <p>
+    Akvaryum hobisi, doğal yaşamı evimize taşımak ve su altı dünyasının güzelliklerini keşfetmek için harika bir yoldur.
+    Cesur Akvaryum olarak, her seviyeden hobiciye kaliteli ürün ve bilgi sunmayı amaçlıyoruz.
+  </p>
   <button onclick="closeModal()">Kapat</button>
 </div>
 
 <div class="contact-section">
   <h2>İletişim</h2>
-  <p><strong>Adres:</strong> 123 Akvaryum Sokak, İstanbul</p>
-  <p><strong>Telefon:</strong> +90 555 123 4567</p>
-  <p><strong>Email:</strong> <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
+  <p>Email: <a href="mailto:iletisim@cesurakvaryum.com">iletisim@cesurakvaryum.com</a></p>
+  <p>Telefon: +90 501 376 15 33</p>
 </div>
 
 <script>
-  function openTab(tabId, element) {
+  function openTab(tabName, elem) {
     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-
-    document.querySelectorAll('.tab-content').forEach(tc => {
-      tc.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
+    elem.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+    document.getElementById(tabName).classList.add('active');
   }
 
   function toggleDetail(button) {
@@ -500,22 +453,12 @@
     }
   }
 
-  const infoBtn = document.getElementById('BilgiBtn');
-  const infoModal = document.getElementById('infoModal');
-
-  infoBtn.onclick = () => {
-    infoModal.style.display = 'block';
-  };
+  document.getElementById('BilgiBtn').addEventListener('click', () => {
+    document.getElementById('infoModal').style.display = 'block';
+  });
 
   function closeModal() {
-    infoModal.style.display = 'none';
-  }
-
-  // Modal dışına tıklayınca kapatma
-  window.onclick = function(event) {
-    if (event.target == infoModal) {
-      closeModal();
-    }
+    document.getElementById('infoModal').style.display = 'none';
   }
 </script>
 
