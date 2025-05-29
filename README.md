@@ -139,7 +139,7 @@
 <!-- Akvaryum İçeriği -->
 <div id="akvaryum" class="tab-content active">
   <div class="scroll-section">
-    <!-- Akvaryum ürünleri burada -->
+
     <div class="product-card">
       <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/fish-tank-1866863_1280.jpg" alt="Küçük Cam Akvaryum" />
       <h3>Küçük Cam Akvaryum</h3>
@@ -149,7 +149,47 @@
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-    <!-- Diğer akvaryum ürünleri burada -->
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2014/11/21/17/36/aquarium-540461_1280.jpg" alt="Büyük Cam Akvaryum" />
+      <h3>Büyük Cam Akvaryum</h3>
+      <p>Geniş hacimli gösterişli akvaryum.</p>
+      <div class="product-detail">
+        200 litrelik bu model, büyük balık grupları için uygundur.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/01/05/13/58/aquarium-1129108_1280.jpg" alt="Yuvarlak Akvaryum" />
+      <h3>Yuvarlak Akvaryum</h3>
+      <p>Modern ve estetik tasarım.</p>
+      <div class="product-detail">
+        Masa üstü veya dekoratif alanlar için ideal yuvarlak cam akvaryum.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2015/11/03/08/57/aquarium-1015297_1280.jpg" alt="Dekoratif Akvaryum" />
+      <h3>Dekoratif Akvaryum</h3>
+      <p>Mobilyaya entegre edilebilir şık model.</p>
+      <div class="product-detail">
+        Şık bir sehpa veya masa içine entegre edilebilir akvaryum modelidir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/aquarium-1865159_1280.jpg" alt="Küp Akvaryum" />
+      <h3>Küp Akvaryum</h3>
+      <p>Temiz çizgilerle modern akvaryum keyfi.</p>
+      <div class="product-detail">
+        Kare yapılı küp akvaryumlar küçük alanlar için tercih edilir.
+      </div>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
+    </div>
+
   </div>
 </div>
 
@@ -176,7 +216,9 @@
       <img src="https://cdn.pixabay.com/photo/2021/08/05/11/20/fish-6522766_1280.jpg" alt="Neon Tetra" />
       <h3>Neon Tetra</h3>
       <p>Renkli ve uyumlu sürü balıkları.</p>
-      <div class="product-detail">Neon tetra, barışçıl doğası ve canlı renkleriyle en çok tercih edilen balıklardandır.</div>
+      <div class="product-detail">
+        Neon tetra, barışçıl doğası ve canlı renkleriyle en çok tercih edilen balıklardandır.
+      </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
@@ -184,7 +226,9 @@
       <img src="https://cdn.pixabay.com/photo/2022/08/30/17/36/betta-7421979_1280.jpg" alt="Beta Balığı" />
       <h3>Beta Balığı</h3>
       <p>Tek başına bakılabilen görkemli balık.</p>
-      <div class="product-detail">Renkli yüzgeçleriyle dikkat çeken beta balığı, agresif yapısıyla bilinir ve yalnız bakılması önerilir.</div>
+      <div class="product-detail">
+        Renkli yüzgeçleriyle dikkat çeken beta balığı, agresif yapısıyla bilinir ve yalnız bakılması önerilir.
+      </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
@@ -192,7 +236,9 @@
       <img src="https://cdn.pixabay.com/photo/2020/06/08/19/35/guppy-5275501_1280.jpg" alt="Lepistes" />
       <h3>Lepistes</h3>
       <p>Renkli ve kolay bakımıyla ideal.</p>
-      <div class="product-detail">Dayanıklı ve kolay üreyen lepistesler, yeni başlayanlar için harika bir tercihtir.</div>
+      <div class="product-detail">
+        Dayanıklı ve kolay üreyen lepistesler, yeni başlayanlar için harika bir tercihtir.
+      </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
@@ -200,7 +246,9 @@
       <img src="https://cdn.pixabay.com/photo/2018/02/08/20/08/fish-3139723_1280.jpg" alt="Çöpçü Balığı" />
       <h3>Çöpçü Balığı</h3>
       <p>Dip temizliğinde yardımcı balık.</p>
-      <div class="product-detail">Akvaryumun dip kısmındaki artıkları temizleyen, sakin ve yararlı bir balıktır.</div>
+      <div class="product-detail">
+        Akvaryumun dip kısmındaki artıkları temizleyen, sakin ve yararlı bir balıktır.
+      </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
@@ -208,7 +256,9 @@
       <img src="https://cdn.pixabay.com/photo/2020/03/06/17/21/snail-4907664_1280.jpg" alt="Elma Salyangozu" />
       <h3>Elma Salyangozu</h3>
       <p>Görsel açıdan hoş ve temizleyici.</p>
-      <div class="product-detail">Elma salyangozu yosunlarla beslenir ve akvaryumun doğal dengesine katkıda bulunur.</div>
+      <div class="product-detail">
+        Elma salyangozu yosunlarla beslenir ve akvaryumun doğal dengesine katkıda bulunur.
+      </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
 
