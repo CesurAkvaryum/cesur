@@ -121,7 +121,7 @@
       border-radius: 30px;
       cursor: pointer;
     }
-    /* Bitti Butonu */
+    /* Bilgi Butonu */
     #bittiBtn {
       background-color: #00796b;
       color: white;
