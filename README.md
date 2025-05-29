@@ -122,7 +122,7 @@
       cursor: pointer;
     }
     /* Bilgi Butonu */
-    #bittiBtn {
+    #BilgiBtn {
       background-color: #00796b;
       color: white;
       border: none;
@@ -302,8 +302,8 @@
   </div>
 </div>
 
-<!-- Bitti Butonu -->
-<button id="bittiBtn">Bitti</button>
+<!-- Bilgi Butonu -->
+<button id="BilgiBtn">Bilgi</button>
 
 <!-- Bilgi Modal -->
 <div id="infoModal">
@@ -338,8 +338,8 @@
     }
   }
 
-  // Bitti butonu işlevi
-  document.getElementById('bittiBtn').addEventListener('click', function() {
+  // Bilgi butonu işlevi
+  document.getElementById('BilgiBtn').addEventListener('click', function() {
     const activeTab = document.querySelector('.tab-content.active');
     if (!activeTab) return;
 
