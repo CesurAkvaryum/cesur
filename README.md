@@ -121,6 +121,49 @@
       border-radius: 30px;
       cursor: pointer;
     }
+    /* Bitti Butonu */
+    #bittiBtn {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 auto 40px;
+      display: block;
+      width: 150px;
+    }
+    /* Modal */
+    #infoModal {
+      display: none;
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+    #infoModal h2 {
+      margin-top: 0;
+      color: #00796b;
+    }
+    #infoModal button {
+      margin-top: 20px;
+      background: #00796b;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -211,7 +254,6 @@
 <!-- Canlı İçeriği -->
 <div id="canli" class="tab-content">
   <div class="scroll-section">
-
     <div class="product-card">
       <img src="https://cdn.pixabay.com/photo/2021/08/05/11/20/fish-6522766_1280.jpg" alt="Neon Tetra" />
       <h3>Neon Tetra</h3>
@@ -221,7 +263,6 @@
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
     <div class="product-card">
       <img src="https://cdn.pixabay.com/photo/2022/08/30/17/36/betta-7421979_1280.jpg" alt="Beta Balığı" />
       <h3>Beta Balığı</h3>
@@ -231,61 +272,121 @@
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2020/06/08/19/35/guppy-5275501_1280.jpg" alt="Lepistes" />
+      <img src="https://cdn.pixabay.com/photo/2021/02/28/17/04/fish-6059249_1280.jpg" alt="Lepistes" />
       <h3>Lepistes</h3>
-      <p>Renkli ve kolay bakımıyla ideal.</p>
+      <p>Kolay bakımı ile sevilen balık.</p>
       <div class="product-detail">
-        Dayanıklı ve kolay üreyen lepistesler, yeni başlayanlar için harika bir tercihtir.
+        Lepistesler dayanıklı ve hızlı çoğalan balıklardır. 22-28°C arasında iyi yaşar.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2018/02/08/20/08/fish-3139723_1280.jpg" alt="Çöpçü Balığı" />
+      <img src="https://cdn.pixabay.com/photo/2017/12/11/14/28/pleco-3019951_1280.jpg" alt="Çöpçü Balığı" />
       <h3>Çöpçü Balığı</h3>
-      <p>Dip temizliğinde yardımcı balık.</p>
+      <p>Dip temizleyici ve uyumlu canlı.</p>
       <div class="product-detail">
-        Akvaryumun dip kısmındaki artıkları temizleyen, sakin ve yararlı bir balıktır.
+        Çöpçü balıkları tankın dip kısmını temizler, 23-28°C sıcaklık arası tercih eder.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
     <div class="product-card">
-      <img src="https://cdn.pixabay.com/photo/2020/03/06/17/21/snail-4907664_1280.jpg" alt="Elma Salyangozu" />
+      <img src="https://cdn.pixabay.com/photo/2014/06/11/18/38/apple-snail-365696_1280.jpg" alt="Elma Salyangozu" />
       <h3>Elma Salyangozu</h3>
-      <p>Görsel açıdan hoş ve temizleyici.</p>
+      <p>Yosunlarla beslenen temizlikçi.</p>
       <div class="product-detail">
-        Elma salyangozu yosunlarla beslenir ve akvaryumun doğal dengesine katkıda bulunur.
+        Elma salyangozları, tankın yosunlarını temizleyerek doğal denge sağlar.
       </div>
       <button class="toggle-btn" onclick="toggleDetail(this)">Detayları Göster</button>
     </div>
-
   </div>
 </div>
 
-<!-- JavaScript -->
+<!-- Bitti Butonu -->
+<button id="bittiBtn">Bitti</button>
+
+<!-- Bilgi Modal -->
+<div id="infoModal">
+  <h2>Bilgi</h2>
+  <div id="infoContent"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+
 <script>
-  function openTab(tabId, buttonElement) {
-    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+  // Tablar arası geçiş
+  function openTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.classList.remove('active');
+    });
     document.getElementById(tabId).classList.add('active');
-    buttonElement.classList.add('active');
+    btn.classList.add('active');
   }
 
-  function toggleDetail(btn) {
-    const card = btn.closest('.product-card');
-    const detail = card.querySelector('.product-detail');
+  // Detay göster/gizle butonu
+  function toggleDetail(button) {
+    const detail = button.previousElementSibling;
     const isActive = detail.classList.contains('active');
-
-    document.querySelectorAll('.product-detail').forEach(d => d.classList.remove('active'));
-    document.querySelectorAll('.toggle-btn').forEach(b => b.textContent = 'Detayları Göster');
-
-    if (!isActive) {
+    if (isActive) {
+      detail.classList.remove('active');
+      button.textContent = 'Detayları Göster';
+    } else {
       detail.classList.add('active');
-      btn.textContent = 'Kapat';
+      button.textContent = 'Detayları Gizle';
     }
+  }
+
+  // Bitti butonu işlevi
+  document.getElementById('bittiBtn').addEventListener('click', function() {
+    const activeTab = document.querySelector('.tab-content.active');
+    if (!activeTab) return;
+
+    const tabId = activeTab.id;
+    let bilgi = '';
+
+    if(tabId === 'akvaryum') {
+      bilgi = `
+        <strong>Akvaryum Çeşitleri ve Yaşam Koşulları:</strong><br><br>
+        <ul>
+          <li><strong>Küçük Cam Akvaryum:</strong> Küçük hacimlerde, küçük balıklar için uygundur. Sık temizlik gerekir.</li>
+          <li><strong>Büyük Cam Akvaryum:</strong> Geniş hacim, büyük balıklar ve bitkiler için ideal. Filtrasyon önemli.</li>
+          <li><strong>Yuvarlak Akvaryum:</strong> Dekoratif, küçük balıklar için uygun. Yüzgeçleri zarar görebilir.</li>
+          <li><strong>Dekoratif Akvaryum:</strong> Mobilyaya entegre, küçük balıklar için uygundur. Su kalitesi takip edilmeli.</li>
+          <li><strong>Küp Akvaryum:</strong> Kare şekilli, küçük ila orta balıklar için ideal. Bitki çeşitleriyle desteklenmeli.</li>
+        </ul>
+      `;
+    } else if(tabId === 'bitki') {
+      bilgi = `
+        <strong>Akvaryum Bitkileri ve Yaşam Koşulları:</strong><br><br>
+        <ul>
+          <li><strong>Akvaryum Bitkisi:</strong> Doğal ortam sağlar. Işık, CO₂ ve uygun sıcaklık gerekir.</li>
+          <li><em>Genel Koşullar:</em> 22-28°C arası sıcaklık, yeterli aydınlatma ve düzenli gübreleme bitkiler için önemlidir.</li>
+        </ul>
+      `;
+    } else if(tabId === 'canli') {
+      bilgi = `
+        <strong>Canlılar ve Yaşam Koşulları:</strong><br><br>
+        <ul>
+          <li><strong>Neon Tetra:</strong> Sürüler halinde barışçıl, 20-26°C sıcaklık ve yumuşak su sever.</li>
+          <li><strong>Beta Balığı:</strong> Tek başına bakılmalı, 24-30°C sıcaklık ve temiz su gerekir.</li>
+          <li><strong>Lepistes:</strong> Kolay bakılır, 22-28°C sıcaklık ve dengeli beslenme ister.</li>
+          <li><strong>Çöpçü Balığı:</strong> Dip temizleyici, 23-28°C arası sıcaklıkta aktif olur.</li>
+          <li><strong>Elma Salyangozu:</strong> Yosunlarla beslenir, su kalitesi yüksek olmalı.</li>
+        </ul>
+      `;
+    } else {
+      bilgi = 'Aktif sekme bulunamadı veya bilgi yok.';
+    }
+
+    document.getElementById('infoContent').innerHTML = bilgi;
+    document.getElementById('infoModal').style.display = 'block';
+  });
+
+  // Modal kapatma
+  function closeModal() {
+    document.getElementById('infoModal').style.display = 'none';
   }
 </script>
 
