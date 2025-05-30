@@ -1,337 +1,805 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cesur Akvaryum</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      background-color: #f4fdfd;
-      color: #003d40;
-    }
-    header {
-      background-color: #006064;
-      color: white;
-      padding: 20px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 900;
-      font-size: 2rem;
-    }
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1607082349250-f7c6c629b3d1') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 900;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-    .products-section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-    }
-    .product-card {
-      background-color: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .product-card .content {
-      padding: 20px;
-    }
-    .product-card h3 {
-      margin: 0 0 10px;
-      color: #00695c;
-    }
-    .product-card p {
-      font-size: 14px;
-      color: #444;
-    }
-    .product-card button {
-      margin-top: 15px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .info-section {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #e0f7fa;
-    }
-    .info-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #004d40;
-    }
-    .info-section p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    .contact-section {
-      background-color: #004d40;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 1rem;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .contact-section h2 {
-      margin-bottom: 20px;
-    }
-    .contact-section a {
-      color: #80cbc4;
-      text-decoration: none;
-    }
-
-    /* Modal stilleri */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .modal-content {
-      background-color: white;
-      border-radius: 12px;
-      max-width: 700px;
-      width: 100%;
-      padding: 30px 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      position: relative;
-      animation: fadeIn 0.3s ease forwards;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    .modal-content h3 {
-      margin-top: 0;
-      color: #00695c;
-      font-weight: 900;
-    }
-    .modal-content p {
-      line-height: 1.5;
-      color: #444;
-    }
-    .modal-content img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 20px 0;
-    }
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      font-size: 24px;
-      color: #666;
-      cursor: pointer;
-      border: none;
-      background: none;
-      font-weight: bold;
-    }
-    .close-btn:hover {
-      color: #00796b;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cesur Akvaryum Petshop</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; background: #e7f0f8; color: #333;
+    display: flex; min-height: 100vh;
+  }
+  aside {
+    width: 270px;
+    background: linear-gradient(180deg, #004d80, #0066b3);
+    color: white; padding: 30px 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+    display: flex; flex-direction: column;
+  }
+  aside h1 {
+    margin-bottom: 40px;
+    font-size: 1.9rem;
+    text-align: center;
+    user-select: none;
+  }
+  aside nav button {
+    background: #0080ff;
+    border: none;
+    padding: 12px 0;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  aside nav button:hover,
+  aside nav button.active {
+    background: #004d80;
+  }
+  main {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+    background: #f7fbff;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  header input[type="search"] {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    width: 250px;
+    font-size: 1rem;
+  }
+  section {
+    display: none;
+  }
+  section.active {
+    display: block;
+  }
+  .item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  .item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  .item h3 {
+    margin-top: 0;
+    color: #004d80;
+  }
+  .item p {
+    margin-top: 10px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    display: none;
+  }
+  .item.active p {
+    display: block;
+  }
+  .favorite-btn {
+    margin-top: 10px;
+    background: #ffcc00;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .favorite-btn.active {
+    background: #ffaa00;
+  }
+  .comment-section {
+    margin-top: 10px;
+  }
+  .comment-section textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    resize: vertical;
+  }
+  .comment-section button {
+    margin-top: 6px;
+    padding: 6px 14px;
+    background: #0066b3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .comments-list {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  .comment {
+    border-bottom: 1px solid #eee;
+    padding: 6px 0;
+  }
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .pagination button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #004d80;
+    color: white;
+  }
+  .notes-section {
+    margin-top: 40px;
+    background: #dbeeff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .notes-section textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  .notes-section button {
+    margin-top: 10px;
+    background: #004d80;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  /* Scrollbar styling for comments */
+  .comments-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  .comments-list::-webkit-scrollbar-thumb {
+    background-color: #004d80;
+    border-radius: 3px;
+  }
+</style>
 </head>
 <body>
-  <header>
+  <aside>
     <h1>Cesur Akvaryum</h1>
     <nav>
-      <a href="#">Anasayfa</a>
-      <a href="#products">Ürünler</a>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#iletisim">İletişim</a>
+      <button class="active" onclick="switchSection('akvaryum')">Akvaryum Modelleri</button>
+      <button onclick="switchSection('bitkiler')">Akvaryum Bitkileri</button>
+      <button onclick="switchSection('canlilar')">Tatlı Su Canlıları</button>
     </nav>
-  </header>
+  </aside>
+  <main>
+    <header>
+      <input type="search" id="searchInput" placeholder="Ara..." oninput="filterItems()" />
+    </header>
 
-  <div class="hero">Doğanın Güzelliğini Evinize Taşıyın</div>
+    <!-- Akvaryumlar -->
+    <section id="akvaryum" class="active">
+      <h2>Akvaryum Modelleri ve Özellikleri</h2>
+      <div id="akvaryumList"></div>
+      <div class="pagination" id="paginationAkvaryum"></div>
+    </section>
 
-  <section class="products-section" id="products">
-    <h2 style="text-align:center; color:#00695c; font-weight:900;">Popüler Ürünler</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1614019512475-c9f6a0eb98d5" alt="Akvaryum 1" />
-        <div class="content">
-          <h3>Akvaryum</h3>
-          <p>Farklı boyutlarda kaliteli cam akvaryumlar.</p>
-          <button class="detail-btn" data-product="Akvaryum">Detaylar</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1592229505780-dc361b2cfa9c" alt="Dekor" />
-        <div class="content">
-          <h3>Akvaryum Dekorları</h3>
-          <p>Estetik ve doğal görünümlü dekor seçenekleri.</p>
-          <button class="detail-btn" data-product="Akvaryum Dekorları">Detaylar</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="Bitki" />
-        <div class="content">
-          <h3>Bitki</h3>
-          <p>Canlı ve yapay bitkilerle doğal bir ortam yaratın.</p>
-          <button class="detail-btn" data-product="Bitki">Detaylar</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1615193470313-bdd2523cc4db" alt="Canlı" />
-        <div class="content">
-          <h3>Canlı</h3>
-          <p>Sağlıklı ve çeşitli akvaryum balıkları.</p>
-          <button class="detail-btn" data-product="Canlı">Detaylar</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1610279721635-4a2e8f142cc1" alt="Filtre" />
-        <div class="content">
-          <h3>Filtreler</h3>
-          <p>Temiz ve sağlıklı su için güçlü filtreler.</p>
-          <button class="detail-btn" data-product="Filtreler">Detaylar</button>
-        </div>
-      </div>
+    <!-- Bitkiler -->
+    <section id="bitkiler">
+      <h2>Akvaryum Bitkileri ve Özellikleri</h2>
+      <div id="bitkiList"></div>
+      <div class="pagination" id="paginationBitki"></div>
+    </section>
+
+    <!-- Canlılar -->
+    <section id="canlilar">
+      <h2>Tatlı Su Canlıları ve Özellikleri</h2>
+      <div id="canliList"></div>
+      <div class="pagination" id="paginationCanli"></div>
+    </section>
+
+    <!-- Notlar -->
+    <div class="notes-section">
+      <h3>Kişisel Notlarınız</h3>
+      <textarea id="personalNotes" placeholder="Buraya notlarınızı yazabilirsiniz..."></textarea>
+      <button onclick="saveNotes()">Notları Kaydet</button>
     </div>
-  </section>
+  </main>
 
-  <section class="info-section" id="hakkimizda">
-    <h2>Hakkımızda</h2>
-    <p>Cesur Akvaryum olarak doğanın en güzel parçalarını evinize getiriyoruz. Uzun yıllardır sektörde edindiğimiz tecrübe ile kaliteli ve güvenilir ürünleri sizlere sunmaktan gurur duyuyoruz. Doğal, sağlıklı ve estetik akvaryum ortamları yaratmak için buradayız.</p>
-  </section>
+<script>
+  // Veri Dizileri
+  const akvaryumlar = [
+    {
+      isim: "Nano Akvaryum 20L",
+      detay: `Boyut: 25x25x30 cm
+Hacim: 20 litre
+Malzeme: Temperli cam
+Özellikler: Küçük alanlar için idealdir. Karides ve küçük canlılar için uygundur.`
+    },
+    {
+      isim: "Kübo Cam Akvaryum 30L",
+      detay: `Boyut: 30x30x35 cm
+Hacim: 30 litre
+Aydınlatma: LED sistem
+Kullanım: Bitkili akvaryumlar için uygundur.`
+    },
+    {
+      isim: "Panoramik Akvaryum 50L",
+      detay: `Boyut: 50x30x40 cm
+Cam: Kavisli ön cam
+Özellik: Şık görünüm sağlar, orta boy balıklar için uygundur.`
+    },
+    {
+      isim: "Standlı Akvaryum 100L",
+      detay: `Boyut: 80x40x50 cm
+Hacim: 100 litre
+Ekstra: Alt dolaplı, filtre bölmesi içeren sistem.`
+    },
+    {
+      isim: "Corner Akvaryum 120L",
+      detay: `Köşe tasarımı: Üçgen form
+Avantaj: Alan tasarrufu sağlar
+Filtre: Dâhili biyolojik filtre`
+    },
+    {
+      isim: "Tuzlu Su Akvaryumu 150L",
+      detay: `Boyut: 90x45x45 cm
+Özellik: Protein skimmer uyumlu
+Canlılar: Mercanlar ve deniz balıkları için uygundur.`
+    },
+    {
+      isim: "Büyük Bitkili Akvaryum 200L",
+      detay: `Boyut: 100x50x50 cm
+Aydınlatma: Full Spectrum LED
+Sistem: CO2 destekli bitki büyütme`
+    },
+    {
+      isim: "Discus Akvaryumu 250L",
+      detay: `Boyut: 120x50x50 cm
+Sıcaklık Sabitleyici: Dahili ısıtıcı
+Kullanım: Discus gibi hassas balık türleri için`
+    },
+    {
+      isim: "Ciklet Akvaryumu 300L",
+      detay: `Hacim: 300 litre
+Cam Kalınlığı: 10 mm
+Uygulama: Güçlü filtrasyonlu, taş dekorlu`
+    },
+    {
+      isim: "Japon Balığı Akvaryumu 350L",
+      detay: `Boyut: 120x60x50 cm
+Özellik: Derin tabanlı, yüksek oksijen desteği
+Öneri: Japon balıkları için geniş yaşam alanı`
+    }
+  ];
 
-  <section class="contact-section" id="iletisim">
-    <h2>İletişim</h2>
-    <p>Adres: Örnek Mah. Akvaryum Sok. No:12, İstanbul</p>
-    <p>Telefon: (0212) 123 45 67</p>
-    <p>Email: <a href="mailto:info@cesurakvaryum.com">info@cesurakvaryum.com</a></p>
-  </section>
+  const bitkiler = [
+    {
+      isim: "Anubias Barteri",
+      detay: `Işık: Düşük-orta
+Büyüme Hızı: Yavaş
+Boyut: 10-15 cm
+Özellikler: Sert yapraklı, yosun tutmaz, kökleriyle dekoratif taşlara bağlanır.`
+    },
+    {
+      isim: "Java Moss (Java Yosunu)",
+      detay: `Işık: Düşük
+Büyüme Hızı: Orta
+Boyut: 5-15 cm
+Özellikler: Hızlı yayılır, yumurtlama için sığınak sağlar, bakımı kolay.`
+    },
+    {
+      isim: "Amazon Sword (Echinodorus amazonicus)",
+      detay: `Işık: Orta
+Büyüme Hızı: Orta
+Boyut: 30-50 cm
+Özellikler: Geniş yapraklı, substratta besleyici gerektirir, orta büyüklükte akvaryumlar için.`
+    },
+    {
+      isim: "Cryptocoryne Wendtii",
+      detay: `Işık: Düşük-orta
+Büyüme Hızı: Yavaş
+Boyut: 10-20 cm
+Özellikler: Dayanıklı, değişken renk tonları, kökleri substrata iyi tutunur.`
+    },
+    {
+      isim: "Java Fern (Microsorum pteropus)",
+      detay: `Işık: Düşük-orta
+Büyüme Hızı: Yavaş
+Boyut: 15-20 cm
+Özellikler: Kökleriyle taş veya dekorasyona tutunur, yaprakları serttir.`
+    },
+    {
+      isim: "Dwarf Hairgrass (Eleocharis acicularis)",
+      detay: `Işık: Yüksek
+Büyüme Hızı: Orta
+Boyut: 10-15 cm
+Özellikler: Halı görünümü oluşturur, substrat gerektirir, CO2 faydalıdır.`
+    },
+    {
+      isim: "Hornwort (Ceratophyllum demersum)",
+      detay: `Işık: Orta
+Büyüme Hızı: Hızlı
+Boyut: 30-60 cm
+Özellikler: Serbest yüzer veya bağlanabilir, oksijen üretimi yüksektir.`
+    },
+    {
+      isim: "Water Wisteria (Hygrophila difformis)",
+      detay: `Işık: Orta
+Büyüme Hızı: Hızlı
+Boyut: 30-50 cm
+Özellikler: Yaprakları dekoratif, hızlı büyür, su şartlarına dayanıklı.`
+    },
+    {
+      isim: "Rotala Rotundifolia",
+      detay: `Işık: Yüksek
+Büyüme Hızı: Hızlı
+Boyut: 20-40 cm
+Özellikler: Kırmızımsı renk verir, ışık ve CO2 ile gelişir.`
+    },
+    {
+      isim: "Sagittaria Subulata",
+      detay: `Işık: Orta
+Büyüme Hızı: Orta
+Boyut: 15-30 cm
+Özellikler: Halı bitkisi, kolay bakılır, substrat önemlidir.`
+    },
+    {
+      isim: "Vallisneria Spiralis",
+      detay: `Işık: Orta
+Büyüme Hızı: Hızlı
+Boyut: 40-70 cm
+Özellikler: Uzun yapraklı, hızlı çoğalır, arka plan bitkisi olarak ideal.`
+    },
+    {
+      isim: "Microsorum Pteropus Narrow",
+      detay: `Işık: Düşük-orta
+Büyüme Hızı: Orta
+Boyut: 15-25 cm
+Özellikler: Dar yapraklı Java Fern çeşidi, dayanıklı ve kolay bakılır.`
+    },
+    {
+      isim: "Bucephalandra",
+      detay: `Işık: Düşük
+Büyüme Hızı: Yavaş
+Boyut: 5-10 cm
+Özellikler: Yavaş büyüyen, renk ve yaprak formu değişikliği gösteren nadir bitki.`
+    },
+    {
+      isim: "Ludwigia Repens",
+      detay: `Işık: Yüksek
+Büyüme Hızı: Orta
+Boyut: 15-30 cm
+Özellikler: Kırmızı tonlu yapraklar, CO2 ile daha parlak renk verir.`
+    },
+    {
+      isim: "Cabomba Caroliniana",
+      detay: `Işık: Orta
+Büyüme Hızı: Hızlı
+Boyut: 30-50 cm
+Özellikler: İnce yapraklı, iyi ışıkla sağlıklı büyür, hızlı yayılır.`
+    },
+    {
+      isim: "Egeria Densa",
+      detay: `Işık: Orta
+Büyüme Hızı: Hızlı
+Boyut: 30-50 cm
+Özellikler: Yaygın oksijen üreten bitki, hızlı büyür, bakımı kolay.`
+    },
+    {
+      isim: "Cryptocoryne Balansae",
+      detay: `Işık: Düşük-orta
+Büyüme Hızı: Yavaş
+Boyut: 20-30 cm
+Özellikler: Koyu yeşil yapraklı, dayanıklı ve uzun ömürlü.`
+    },
+    {
+      isim: "Marsilea Hirsuta",
+      detay: `Işık: Orta
+Büyüme Hızı: Orta
+Boyut: 5-10 cm
+Özellikler: Yosun gibi yayılan halı bitkisi, bakımı kolaydır.`
+    },
+    {
+      isim: "Hemianthus Callitrichoides",
+      detay: `Işık: Yüksek
+Büyüme Hızı: Orta
+Boyut: 2-5 cm
+Özellikler: En küçük halı bitkisi, CO2 ve güçlü ışık ister.`
+    },
+    {
+      isim: "Sagittaria Subulata",
+      detay: `Işık: Orta
+Büyüme Hızı: Orta
+Boyut: 10-20 cm
+Özellikler: Halı gibi büyür, uygun substratla gelişir.`
+    },
+    {
+      isim: "Pogostemon Helferi",
+      detay: `Işık: Yüksek
+Büyüme Hızı: Orta
+Boyut: 10-15 cm
+Özellikler: İlginç yaprak yapısı, estetik görüntü sağlar.`
+    }
+  ];
 
-  <!-- Modal -->
-  <div class="modal" id="productModal">
-    <div class="modal-content">
-      <button class="close-btn" id="closeModal">&times;</button>
-      <h3 id="modalTitle"></h3>
-      <img id="modalImage" src="" alt="" />
-      <p id="modalDescription"></p>
-    </div>
-  </div>
+  const canlilar = [
+    {
+      isim: "Pengasus Köpek Balığı",
+      detay: `Boy: En fazla 130 cm (akvaryumda genellikle 1 m altı)
+Kilo: Maksimum 44 kg
+Karakter: Yavruyken sürü içinde, büyüyünce yalnız
+pH: 6.5-7.5
+Sıcaklık: 22-26°C
+Su Sertliği: 2-20 dGH
+Minimum Akvaryum: 350-400 litre (yavruyken)
+Ortalama Ömür: 20 yıl
+Notlar: Karma akvaryuma uygun ancak büyük balıklarla.`
+    },
+    {
+      isim: "Neon Tetra",
+      detay: `Boy: 3-4 cm
+Karakter: Sürüler halinde yaşar, barışçıl
+pH: 6.0-7.0
+Sıcaklık: 20-26°C
+Su Sertliği: 1-10 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 5 yıl
+Notlar: Renkli, küçük topluluk balığıdır.`
+    },
+    {
+      isim: "Betta Balığı (Savaşçı Balık)",
+      detay: `Boy: 6-7 cm
+Karakter: Tek başına agresif, alan koruyucu
+pH: 6.5-7.5
+Sıcaklık: 24-30°C
+Su Sertliği: 3-5 dGH
+Minimum Akvaryum: 20 litre
+Ortalama Ömür: 3-5 yıl
+Notlar: Tek erkek bir akvaryumda birden fazla tutulmamalı.`
+    },
+    {
+      isim: "Guppy",
+      detay: `Boy: 4-6 cm
+Karakter: Barışçıl, sürü balığı
+pH: 7.0-8.2
+Sıcaklık: 22-28°C
+Su Sertliği: 10-20 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 2-3 yıl
+Notlar: Kolay üreme, canlı doğurur.`
+    },
+    {
+      isim: "Corydoras (Dipçi)",
+      detay: `Boy: 4-7 cm
+Karakter: Barışçıl, sürü halinde
+pH: 6.0-7.8
+Sıcaklık: 22-26°C
+Su Sertliği: 2-15 dGH
+Minimum Akvaryum: 60 litre
+Ortalama Ömür: 5 yıl
+Notlar: Dip temizleyicisi, kumlu zemin ister.`
+    },
+    {
+      isim: "Zebra Danio",
+      detay: `Boy: 5 cm
+Karakter: Çok hareketli, barışçıl
+pH: 6.5-7.5
+Sıcaklık: 18-24°C
+Su Sertliği: 5-12 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 3-5 yıl
+Notlar: Kolay bakılır, sürü halinde olmalı.`
+    },
+    {
+      isim: "Discus Balığı",
+      detay: `Boy: 15 cm
+Karakter: Barışçıl, hassas bakımı gerekir
+pH: 6.0-7.0
+Sıcaklık: 27-31°C
+Su Sertliği: 1-8 dGH
+Minimum Akvaryum: 200 litre
+Ortalama Ömür: 10 yıl
+Notlar: Yüksek su kalitesi ve düzenli bakım gerektirir.`
+    },
+    {
+      isim: "Molly Balığı",
+      detay: `Boy: 6-8 cm
+Karakter: Barışçıl, sürü halinde
+pH: 7.4-8.5
+Sıcaklık: 24-28°C
+Su Sertliği: 15-30 dGH
+Minimum Akvaryum: 60 litre
+Ortalama Ömür: 3-5 yıl
+Notlar: Tuzlu suya kısmen dayanıklı, canlı doğurur.`
+    },
+    {
+      isim: "Plati Balığı",
+      detay: `Boy: 5-6 cm
+Karakter: Barışçıl, sürü halinde
+pH: 7.0-8.3
+Sıcaklık: 20-26°C
+Su Sertliği: 10-25 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 3 yıl
+Notlar: Kolay bakılır, renk çeşitliliği fazla.`
+    },
+    {
+      isim: "Kardinal Tetra",
+      detay: `Boy: 4 cm
+Karakter: Barışçıl, sürü halinde
+pH: 6.0-7.0
+Sıcaklık: 23-27°C
+Su Sertliği: 1-12 dGH
+Minimum Akvaryum: 50 litre
+Ortalama Ömür: 5 yıl
+Notlar: Neon tetralara benzer, parlak kırmızı şeritleri var.`
+    },
+    {
+      isim: "Kılıçkuyruk Balığı",
+      detay: `Boy: 6-7 cm
+Karakter: Barışçıl, sürü halinde
+pH: 7.0-8.3
+Sıcaklık: 22-28°C
+Su Sertliği: 10-25 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 3-5 yıl
+Notlar: Renk çeşitliliği fazladır, kolay bakım.`
+    },
+    {
+      isim: "Ancistrus (Palyaço Yayınbalığı)",
+      detay: `Boy: 10-15 cm
+Karakter: Barışçıl, gece aktiftir
+pH: 6.5-7.5
+Sıcaklık: 22-28°C
+Su Sertliği: 2-15 dGH
+Minimum Akvaryum: 60 litre
+Ortalama Ömür: 5-8 yıl
+Notlar: Alglere karşı etkilidir, dekoratif mağaralar sever.`
+    },
+    {
+      isim: "Rasbora Arlequin",
+      detay: `Boy: 3-4 cm
+Karakter: Barışçıl, sürü halinde
+pH: 6.5-7.5
+Sıcaklık: 23-27°C
+Su Sertliği: 2-12 dGH
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 4-6 yıl
+Notlar: Küçük ve renkli sürü balığı.`
+    },
+    {
+      isim: "Cherry Shrimp (Kırmızı Karides)",
+      detay: `Boy: 2-3 cm
+Karakter: Barışçıl, küçük omurgasız
+pH: 6.5-7.5
+Sıcaklık: 22-26°C
+Minimum Akvaryum: 20 litre
+Ortalama Ömür: 1-2 yıl
+Notlar: Bitkili akvaryumlar için ideal, yosunları yer.`
+    },
+    {
+      isim: "Otocinclus Catfish",
+      detay: `Boy: 4-5 cm
+Karakter: Barışçıl, alg yiyici
+pH: 6.8-7.5
+Sıcaklık: 22-26°C
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 3 yıl
+Notlar: Küçük alg temizleyicisi.`
+    },
+    {
+      isim: "Dwarf Gourami",
+      detay: `Boy: 6-7 cm
+Karakter: Barışçıl, renkli
+pH: 6.0-7.5
+Sıcaklık: 24-28°C
+Minimum Akvaryum: 40 litre
+Ortalama Ömür: 4-6 yıl
+Notlar: Canlı renkleri ile popüler.`
+    }
+  ];
 
-  <script>
-    // Ürün detayları bilgisi
-    const productDetails = {
-      "Akvaryum": {
-        description: "Farklı boyutlarda kaliteli camdan yapılmış, dayanıklı ve şık tasarımlı akvaryumlarımız ile evinizin dekorasyonunu tamamlayın.",
-        image: "https://images.unsplash.com/photo-1614019512475-c9f6a0eb98d5"
-      },
-      "Akvaryum Dekorları": {
-        description: "Doğal görünümlü taşlar, bitkiler ve diğer dekoratif ürünlerle akvaryumunuzu güzelleştirin ve balıklarınıza daha doğal bir ortam sağlayın.",
-        image: "https://images.unsplash.com/photo-1592229505780-dc361b2cfa9c"
-      },
-      "Bitki": {
-        description: "Canlı veya yapay bitkilerimizle akvaryumunuzu daha canlı ve sağlıklı hale getirin. Doğal ortamın keyfini çıkarın.",
-        image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac"
-      },
-      "Canlı": {
-        description: "Sağlıklı, dayanıklı ve çeşitli balık türleri ile akvaryumunuzu renklendirin. Uzman ekibimiz her zaman yanınızda.",
-        image: "https://images.unsplash.com/photo-1615193470313-bdd2523cc4db"
-      },
-      "Filtreler": {
-        description: "Akvaryumunuzun suyunu temiz ve sağlıklı tutmak için çeşitli kapasite ve modellerde güçlü filtre sistemlerimiz mevcuttur.",
-        image: "https://images.unsplash.com/photo-1610279721635-4a2e8f142cc1"
-      }
-    };
+  // Durum ve Arama
+  let currentSection = 'akvaryum';
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  let personalNotes = localStorage.getItem('personalNotes') || '';
 
-    // Modal ve butonları seç
-    const modal = document.getElementById('productModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalImage = document.getElementById('modalImage');
-    const modalDescription = document.getElementById('modalDescription');
-    const closeModalBtn = document.getElementById('closeModal');
+  // Sayfalama ayarları
+  const pageSize = 5;
+  let currentPage = {
+    akvaryum: 1,
+    bitkiler: 1,
+    canlilar: 1
+  };
 
-    // Detay butonlarına event listener ekle
-    document.querySelectorAll('.detail-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const productName = button.getAttribute('data-product');
-        const details = productDetails[productName];
-        if(details) {
-          modalTitle.textContent = productName;
-          modalImage.src = details.image;
-          modalImage.alt = productName;
-          modalDescription.textContent = details.description;
-          modal.style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // scroll kilitle
-        }
+  function switchSection(section) {
+    currentSection = section;
+    document.querySelectorAll('aside nav button').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`aside nav button[onclick="switchSection('${section}')"]`).classList.add('active');
+
+    document.querySelectorAll('main section').forEach(sec => {
+      sec.classList.remove('active');
+    });
+    document.getElementById(section).classList.add('active');
+
+    document.getElementById('searchInput').value = '';
+    currentPage[section] = 1;
+    renderSection();
+  }
+
+  function filterItems() {
+    currentPage[currentSection] = 1;
+    renderSection();
+  }
+
+  function paginate(array, page = 1) {
+    const start = (page - 1) * pageSize;
+    return array.slice(start, start + pageSize);
+  }
+
+  function isFavorite(name) {
+    return favorites.includes(name);
+  }
+
+  function toggleFavorite(name, btn) {
+    if (favorites.includes(name)) {
+      favorites = favorites.filter(x => x !== name);
+      btn.classList.remove('active');
+      btn.textContent = 'Favorilerden Çıkar';
+    } else {
+      favorites.push(name);
+      btn.classList.add('active');
+      btn.textContent = 'Favorilere Ekle';
+    }
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }
+
+  function saveNotes() {
+    const notes = document.getElementById('personalNotes').value;
+    localStorage.setItem('personalNotes', notes);
+    alert('Notlarınız kaydedildi!');
+  }
+
+  function renderSection() {
+    let listElement, data, paginationElement;
+
+    switch(currentSection) {
+      case 'akvaryum':
+        listElement = document.getElementById('akvaryumList');
+        data = akvaryumlar;
+        paginationElement = document.getElementById('paginationAkvaryum');
+        break;
+      case 'bitkiler':
+        listElement = document.getElementById('bitkiList');
+        data = bitkiler;
+        paginationElement = document.getElementById('paginationBitki');
+        break;
+      case 'canlilar':
+        listElement = document.getElementById('canliList');
+        data = canlilar;
+        paginationElement = document.getElementById('paginationCanli');
+        break;
+    }
+
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = data.filter(item => item.isim.toLowerCase().includes(searchTerm) || item.detay.toLowerCase().includes(searchTerm));
+
+    const pagedItems = paginate(filtered, currentPage[currentSection]);
+
+    listElement.innerHTML = '';
+    if(pagedItems.length === 0) {
+      listElement.innerHTML = `<p>Aramanıza uygun sonuç bulunamadı.</p>`;
+      paginationElement.innerHTML = '';
+      return;
+    }
+
+    pagedItems.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'item';
+      div.innerHTML = `
+        <h3>${item.isim}</h3>
+        <p>${item.detay}</p>
+        <button class="favorite-btn ${isFavorite(item.isim) ? 'active' : ''}">
+          ${isFavorite(item.isim) ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}
+        </button>
+        <div class="comment-section">
+          <textarea placeholder="Yorumunuzu yazın..."></textarea>
+          <button>Yorumu Kaydet</button>
+          <div class="comments-list"></div>
+        </div>
+      `;
+      // Açılır kapanır detay için başlığa tıklayınca
+      div.querySelector('h3').addEventListener('click', () => {
+        div.classList.toggle('active');
       });
-    });
 
-    // Modal kapatma
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
+      // Favori butonu
+      const favBtn = div.querySelector('button.favorite-btn');
+      favBtn.addEventListener('click', () => toggleFavorite(item.isim, favBtn));
 
-    // Modal dışına tıklayınca kapatma
-    window.addEventListener('click', (e) => {
-      if(e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+      // Yorum sistemi
+      const commentBtn = div.querySelector('.comment-section button');
+      const commentArea = div.querySelector('.comment-section textarea');
+      const commentsList = div.querySelector('.comments-list');
+      // Yorumları localStorage'dan al
+      const commentKey = `comments_${item.isim}`;
+      let comments = JSON.parse(localStorage.getItem(commentKey)) || [];
+
+      function renderComments() {
+        commentsList.innerHTML = '';
+        if (comments.length === 0) {
+          commentsList.innerHTML = '<p>Henüz yorum yok.</p>';
+          return;
+        }
+        comments.forEach(cmt => {
+          const cmtDiv = document.createElement('div');
+          cmtDiv.className = 'comment';
+          cmtDiv.textContent = cmt;
+          commentsList.appendChild(cmtDiv);
+        });
       }
+      renderComments();
+
+      commentBtn.addEventListener('click', () => {
+        const text = commentArea.value.trim();
+        if (text === '') {
+          alert('Lütfen yorum girin!');
+          return;
+        }
+        comments.push(text);
+        localStorage.setItem(commentKey, JSON.stringify(comments));
+        commentArea.value = '';
+        renderComments();
+      });
+
+      listElement.appendChild(div);
     });
-  </script>
+
+    // Pagination render
+    const totalPages = Math.ceil(filtered.length / pageSize);
+    if (totalPages > 1) {
+      paginationElement.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage[currentSection]) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          currentPage[currentSection] = i;
+          renderSection();
+        });
+        paginationElement.appendChild(btn);
+      }
+    } else {
+      paginationElement.innerHTML = '';
+    }
+  }
+
+  // Başlangıçta 'akvaryum' sekmesini aç
+  switchSection('akvaryum');
+
+  // Notları yükle
+  document.getElementById('personalNotes').value = personalNotes;
+
+  // Kaydet butonu
+  document.getElementById('saveNotes').addEventListener('click', saveNotes);
+
+</script>
+
 </body>
 </html>
